@@ -10,134 +10,18 @@ Skipping (python)
 === EVALUATION ===
 
 == BFS ==
-  Passed 4 / 6 tests.
+  Passed 5 / 6 tests.
 
 - Failed test: BFS
 - Command run: python solution.py --ss 3x3_puzzle.txt --alg bfs
 Execution timed out.
 
-- Failed test: BFS
-- Command run: python solution.py --ss ai.txt --alg bfs
-Execution failed with error:
-# BFS
-Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
-    main()
-  File "solution.py", line 113, in main
-    start_state, end_state, transitions = get_data(path_state)
-  File "solution.py", line 21, in get_data
-    city, transitions = line[0], line[1].split(" ")
-IndexError: list index out of range
-
-
 == UCS ==
-  Passed 0 / 6 tests.
+  Passed 5 / 6 tests.
 
 - Failed test: UCS
 - Command run: python solution.py --ss 3x3_puzzle.txt --alg ucs
 Execution timed out.
-
-- Failed test: UCS
-- Command run: python solution.py --ss ai.txt --alg ucs
-Execution failed with error:
-# UCS
-Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
-    main()
-  File "solution.py", line 127, in main
-    start_state, end_state, successors = get_data(path_state)
-  File "solution.py", line 21, in get_data
-    city, transitions = line[0], line[1].split(" ")
-IndexError: list index out of range
-
-
-- Failed test: UCS
-- Command run: python solution.py --ss istra.txt --alg ucs
-Mismatch with field: TOTAL_COST
--> Obtained output:
-119.0
--> Expected output:
-100.0
--> Complete obtained output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 14
-[PATH_LENGTH]: 5
-[TOTAL_COST]: 119.0
-[PATH]: Pula => Barban => Labin => Lupoglav => Buzet
--> Complete expected output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 17
-[PATH_LENGTH]: 5
-[TOTAL_COST]: 100.0
-[PATH]: Pula => Barban => Labin => Lupoglav => Buzet
-
-- Failed test: UCS
-- Command run: python solution.py --ss test_case_1.txt --alg ucs
-Mismatch with field: TOTAL_COST
--> Obtained output:
-305.0
--> Expected output:
-54.0
--> Complete obtained output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 14
-[PATH_LENGTH]: 5
-[TOTAL_COST]: 305.0
-[PATH]: A => D => H => E => O
--> Complete expected output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 14
-[PATH_LENGTH]: 5
-[TOTAL_COST]: 54.0
-[PATH]: A => D => H => E => O
-
-- Failed test: UCS
-- Command run: python solution.py --ss test_case_2.txt --alg ucs
-Mismatch with field: TOTAL_COST
--> Obtained output:
-40.0
--> Expected output:
-90.0
--> Complete obtained output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 11
-[PATH_LENGTH]: 3
-[TOTAL_COST]: 40.0
-[PATH]: A => H => Z
--> Complete expected output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 21
-[PATH_LENGTH]: 3
-[TOTAL_COST]: 90.0
-[PATH]: A => H => Z
-
-- Failed test: UCS
-- Command run: python solution.py --ss test_case_3.txt --alg ucs
-Mismatch with field: TOTAL_COST
--> Obtained output:
-322.0
--> Expected output:
-208.0
--> Complete obtained output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 23
-[PATH_LENGTH]: 6
-[TOTAL_COST]: 322.0
-[PATH]: A => E => F => S => D => Y
--> Complete expected output:
-# UCS
-[FOUND_SOLUTION]: yes
-[STATES_VISITED]: 25
-[PATH_LENGTH]: 7
-[TOTAL_COST]: 208.0
-[PATH]: A => E => F => G => M => B => Y
 
 == A-STAR ==
   Passed 0 / 7 tests.
@@ -147,13 +31,12 @@ Mismatch with field: TOTAL_COST
 Execution failed with error:
 # A-STAR ai_fail.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 143, in main
-    start_state, end_state, successors = get_data(path_state)
-  File "solution.py", line 21, in get_data
-    city, transitions = line[0], line[1].split(" ")
-IndexError: list index out of range
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
+    print(f"[FOUND_SOLUTION]: {found_solution}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR ai_pass.txt
@@ -161,13 +44,12 @@ IndexError: list index out of range
 Execution failed with error:
 # A-STAR ai_pass.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 143, in main
-    start_state, end_state, successors = get_data(path_state)
-  File "solution.py", line 21, in get_data
-    city, transitions = line[0], line[1].split(" ")
-IndexError: list index out of range
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
+    print(f"[FOUND_SOLUTION]: {found_solution}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR istra_heuristic.txt
@@ -175,11 +57,12 @@ IndexError: list index out of range
 Execution failed with error:
 # A-STAR istra_heuristic.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 146, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
     print(f"[FOUND_SOLUTION]: {found_solution}")
-UnboundLocalError: local variable 'found_solution' referenced before assignment
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR istra_pessimistic_heuristic.txt
@@ -187,11 +70,12 @@ UnboundLocalError: local variable 'found_solution' referenced before assignment
 Execution failed with error:
 # A-STAR istra_pessimistic_heuristic.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 146, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
     print(f"[FOUND_SOLUTION]: {found_solution}")
-UnboundLocalError: local variable 'found_solution' referenced before assignment
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR test_case_1_heuristic.txt
@@ -199,11 +83,12 @@ UnboundLocalError: local variable 'found_solution' referenced before assignment
 Execution failed with error:
 # A-STAR test_case_1_heuristic.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 146, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
     print(f"[FOUND_SOLUTION]: {found_solution}")
-UnboundLocalError: local variable 'found_solution' referenced before assignment
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR test_case_2_heuristic.txt
@@ -211,11 +96,12 @@ UnboundLocalError: local variable 'found_solution' referenced before assignment
 Execution failed with error:
 # A-STAR test_case_2_heuristic.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 146, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
     print(f"[FOUND_SOLUTION]: {found_solution}")
-UnboundLocalError: local variable 'found_solution' referenced before assignment
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 - Failed test: A-STAR test_case_3_heuristic.txt
@@ -223,11 +109,12 @@ UnboundLocalError: local variable 'found_solution' referenced before assignment
 Execution failed with error:
 # A-STAR test_case_3_heuristic.txt
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 146, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 183, in main
     print(f"[FOUND_SOLUTION]: {found_solution}")
-UnboundLocalError: local variable 'found_solution' referenced before assignment
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'found_solution' where it is not associated with a value
 
 
 == HEURISTIC-CONSISTENT ==
@@ -237,10 +124,11 @@ UnboundLocalError: local variable 'found_solution' referenced before assignment
 - Command run: python solution.py --ss ai.txt --h ai_fail.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -248,10 +136,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss ai.txt --h ai_pass.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -259,10 +148,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss istra.txt --h istra_pessimistic_heuristic.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -270,10 +160,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss istra.txt --h istra_heuristic.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -281,10 +172,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_1.txt --h test_case_1_heuristic.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -292,10 +184,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_1.txt --h test_case_1_heuristic_nonopt.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -303,10 +196,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_2.txt --h test_case_2_heuristic.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -314,10 +208,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_2.txt --h test_case_2_heuristic_nonopt.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -325,10 +220,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_3.txt --h test_case_3_heuristic.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -336,10 +232,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_3.txt --h test_case_3_heuristic_nonopt.txt --check-consistent 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 108, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 145, in main
     consistent = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -350,10 +247,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss ai.txt --h ai_fail.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -361,10 +259,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss ai.txt --h ai_pass.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -372,10 +271,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss istra.txt --h istra_pessimistic_heuristic.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -383,10 +283,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss istra.txt --h istra_heuristic.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -394,10 +295,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_1.txt --h test_case_1_heuristic.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -405,10 +307,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_1.txt --h test_case_1_heuristic_nonopt.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -416,10 +319,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_2.txt --h test_case_2_heuristic.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -427,10 +331,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_2.txt --h test_case_2_heuristic_nonopt.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -438,10 +343,11 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_3.txt --h test_case_3_heuristic.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
@@ -449,13 +355,14 @@ IndexError: list index out of range
 - Command run: python solution.py --ss test_case_3.txt --h test_case_3_heuristic_nonopt.txt --check-optimistic 
 Execution failed with error:
 Traceback (most recent call last):
-  File "solution.py", line 155, in <module>
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 193, in <module>
     main()
-  File "solution.py", line 106, in main
+  File "C:\Users\Mateo\AppData\Local\Temp\tmp4o1wvxfb\lab1py\solution.py", line 143, in main
     optimistic = sys.argv[i+1]
+                 ~~~~~~~~^^^^^
 IndexError: list index out of range
 
 
 === TOTAL RESULTS ===
-4 / 39 tests passed. (10.26%)
+10 / 39 tests passed. (25.64%)
 

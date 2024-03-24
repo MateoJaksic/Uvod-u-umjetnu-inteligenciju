@@ -18,13 +18,16 @@ def get_data(file):
     for i in range(len(data)):
         if data[i][0] != "#":
             if start_state != None and end_state == None:
-                end_state = data[i].rstrip("\n")
+                end_state = [state for state in data[i].rstrip("\n").split(" ")]  # Moguće je imati više konačnih stanja pa implementiramo kao listu konačnih stanja
             elif start_state == None:
                 start_state = data[i].rstrip("\n")
             else: 
                 line = data[i].rstrip("\n").split(": ")
-                state, transitions = line[0], line[1].split(" ")
-                successors[state] = { key: int(value) for (key, value) in [successor.split(",") for successor in transitions] }
+                if len(line) == 2:  # Ako postoje prijelazi za stanje
+                    state, transitions = line[0], line[1].split(" ")
+                    successors[state] = { key: int(value) for (key, value) in [successor.split(",") for successor in transitions] }
+                else:  # Ako ne postoje prijalazi za stanje
+                    successors[line[0]] = None
 
     return start_state, end_state, successors
 
@@ -46,7 +49,7 @@ def get_heuristics_data(file):
 # Funkcija za pretraživanje u širinu (BFS)
 def bfs(start_state, end_state, successors):
     start_state = Node(start_state, None)  # Čvor u sebi ima informaciju o trenutnom stanju i njegovom parentu
-    end_state = Node(end_state, None)
+    end_state = [state for state in end_state]  # Lista koja sadrži jedno ili više konačnih stanja
     open = []  # Open je lista otvorenih stanja koja se sastoji od čvorova
     closed = []  # Closed je lista zatvorenih stanja koja se sastoji od naziva stanja, ako bi ju punili čvorovima, onda bi razlikovalo ista stanja kao više različitih zbog parenta
     total_cost = 0 
@@ -62,7 +65,7 @@ def bfs(start_state, end_state, successors):
             closed.append(current_state.name)
             
         # Provjeravamo je li trenutno stanje konačno stanje
-        if current_state.name == end_state.name:
+        if current_state.name in end_state:
             # Stvaramo putanju iz konačnog stanja do početnog stanja
             path = []
             while current_state.name != start_state.name:
@@ -87,7 +90,7 @@ def bfs(start_state, end_state, successors):
 # Funkcija za pretraživanje s jednolikom cijenom (UCS)
 def ucs(start_state, end_state, successors):
     start_state = Node(start_state, None)
-    end_state = Node(end_state, None)
+    end_state = [state for state in end_state]
     open = []  # Open je lista otvorenih stanja koja se sastoji od dictionarya, koji sadrži vrijednosti čvora i cijene puta, po kojoj onda sortiramo listu
     closed = []
     total_cost = 0
@@ -103,7 +106,7 @@ def ucs(start_state, end_state, successors):
             closed.append(current_state["node"].name)
             
         # Provjeravamo je li trenutno stanje konačno stanje
-        if current_state["node"].name == end_state.name:
+        if current_state["node"].name in end_state:
             path = []
             while current_state["node"].name != start_state.name:
                 path.append(current_state["node"].name)

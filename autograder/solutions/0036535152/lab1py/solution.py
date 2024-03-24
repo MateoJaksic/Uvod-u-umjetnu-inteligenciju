@@ -1,10 +1,15 @@
 import sys
 
+
+# Klasa za definiranje čvora
 class Node: 
     def __init__(self, name, parent):
         self.name = name
         self.parent = parent
 
+
+
+# Funkcija za dohvaćanje podataka
 def get_data(file): 
     with open(file, "r", encoding="utf-8") as f:
         data = f.readlines()
@@ -13,16 +18,22 @@ def get_data(file):
     for i in range(len(data)):
         if data[i][0] != "#":
             if start_state != None and end_state == None:
-                end_state = data[i].rstrip("\n")  
+                end_state = [state for state in data[i].rstrip("\n").split(" ")]  # Moguće je imati više konačnih stanja pa implementiramo kao listu konačnih stanja
             elif start_state == None:
                 start_state = data[i].rstrip("\n")
             else: 
                 line = data[i].rstrip("\n").split(": ")
-                city, transitions = line[0], line[1].split(" ")
-                successors[city] = { key: int(value) for (key, value) in [successor.split(",") for successor in transitions] }
+                if len(line) == 2:  # Ako postoje prijelazi za stanje
+                    state, transitions = line[0], line[1].split(" ")
+                    successors[state] = { key: int(value) for (key, value) in [successor.split(",") for successor in transitions] }
+                else:  # Ako ne postoje prijalazi za stanje
+                    successors[line[0]] = None
 
     return start_state, end_state, successors
 
+
+
+# Funkcija za dohvaćanje heurističkih podataka
 def get_heuristics_data(file):
     with open(file, "r", encoding="utf-8") as f:
         data = f.readlines()
@@ -34,65 +45,91 @@ def get_heuristics_data(file):
     return heuristics
 
 
+
+# Funkcija za pretraživanje u širinu (BFS)
 def bfs(start_state, end_state, successors):
-    start_state = Node(start_state, None)
-    end_state = Node(end_state, None)
-    open = []
-    closed = []
-    total_cost = 0
+    start_state = Node(start_state, None)  # Čvor u sebi ima informaciju o trenutnom stanju i njegovom parentu
+    end_state = [state for state in end_state]  # Lista koja sadrži jedno ili više konačnih stanja
+    open = []  # Open je lista otvorenih stanja koja se sastoji od čvorova
+    closed = []  # Closed je lista zatvorenih stanja koja se sastoji od naziva stanja, ako bi ju punili čvorovima, onda bi razlikovalo ista stanja kao više različitih zbog parenta
+    total_cost = 0 
         
+    # Dodajemo početno stanje u listu otvorenih
     open.append(start_state)
-    total_cost += 1
+    # Dok je lista otvorenih neprazna, prolazimo kroz nju
     while len(open) != 0:
-        current_city = open.pop(0)
-        if current_city.name not in closed:
-            closed.append(current_city.name)
+        # Uzimamo prvo stanje iz liste otvorenih koje postaje trenutno stanje
+        current_state = open.pop(0)
+        # Ako taj čvor nije u listi zatvorenih, dodajemo ga 
+        if current_state.name not in closed:
+            closed.append(current_state.name)
             
-        if current_city.name == end_state.name:
+        # Provjeravamo je li trenutno stanje konačno stanje
+        if current_state.name in end_state:
+            # Stvaramo putanju iz konačnog stanja do početnog stanja
             path = []
-            while current_city.name != start_state.name:
-                path.append(current_city.name)
-                current_city = current_city.parent
+            while current_state.name != start_state.name:
+                path.append(current_state.name)
+                temp = current_state.name  # Spremamo ime trenutnog stanja
+                current_state = current_state.parent  # Dohvaćamo parenta trenutnog stanja
+                total_cost += successors[current_state.name][temp]  # Zbrajamo trošak putavanja iz parenta u trenutno stanje
             path.append(start_state.name)
 
-            return "yes", len(closed), len(path), float(total_cost), ' => '.join(list(reversed(path)))
+            # Vraćamo potvrdu uspješnosti, broj prođenih stanja, duljinu putanje, totalnu cijenu putanje te putanju 
+            return "yes", len(closed), len(path), float(total_cost), " => ".join(list(reversed(path)))
 
-        for city in sorted(successors[current_city.name].keys()):
-            open.append(Node(city, current_city))
-            total_cost += 1
+        # Ako trenutno stanje nije konačno stanje, ekspandiramo njegovu djecu i dodajemo u listu otvorenih po abecednom redoslijedu 
+        for state in sorted(successors[current_state.name].keys()):
+            open.append(Node(state, current_state))
 
+    # Ukoliko je pretraživanje bilo neuspješno vraćamo potvrdu neuspješnosti
     return "no", None, None, None, None
 
 
+
+# Funkcija za pretraživanje s jednolikom cijenom (UCS)
 def ucs(start_state, end_state, successors):
     start_state = Node(start_state, None)
-    end_state = Node(end_state, None)
-    open = []
+    end_state = [state for state in end_state]
+    open = []  # Open je lista otvorenih stanja koja se sastoji od dictionarya, koji sadrži vrijednosti čvora i cijene puta, po kojoj onda sortiramo listu
     closed = []
     total_cost = 0
         
-    open.append({"node": start_state, "distance": 0})
-    total_cost += 1
+    # Dodajemo početno stanje u listu otvorenih
+    open.append({"node": start_state, "price": 0})
+    # Dok je lista otvorenih neprazna, prolazimo kroz nju
     while len(open) != 0:
-        current_city = open.pop(0)
-        if current_city["node"].name not in closed:
-            closed.append(current_city["node"].name)
+        # Uzimamo prvo stanje iz liste otvorenih koje postaje trenutno stanje
+        current_state = open.pop(0)
+        # Ako taj čvor nije u listi zatvorenih, dodajemo ga 
+        if current_state["node"].name not in closed:
+            closed.append(current_state["node"].name)
             
-        if current_city["node"].name == end_state.name:
+        # Provjeravamo je li trenutno stanje konačno stanje
+        if current_state["node"].name in end_state:
             path = []
-            while current_city["node"].name != start_state.name:
-                path.append(current_city["node"].name)
-                current_city = {"node": current_city["node"].parent}
+            while current_state["node"].name != start_state.name:
+                path.append(current_state["node"].name)
+                temp = current_state["node"].name  # Spremamo ime trenutnog stanja
+                current_state = {"node": current_state["node"].parent}  # Dohvaćamo parenta trenutnog stanja
+                total_cost += successors[current_state["node"].name][temp]  # Zbrajamo trošak putavanja iz parenta u trenutno stanje
             path.append(start_state.name)
 
-            return "yes", len(closed), len(path), float(total_cost), ' => '.join(list(reversed(path)))
+            # Vraćamo potvrdu uspješnosti, broj prođenih stanja, duljinu putanje, totalnu cijenu putanje te putanju 
+            return "yes", len(closed), len(path), float(total_cost), " => ".join(list(reversed(path)))
 
-        for city in dict(sorted(successors[current_city["node"].name].items(), key=lambda item: item[1])).keys():
-            open.append({"node": Node(city, current_city["node"]), "distance": (successors[current_city['node'].name])[city]})
-            total_cost += 1
+        # Ako trenutno stanje nije konačno stanje, ekspandiramo njegovu djecu i dodajemo u listu otvorenih  
+        for state in successors[current_state["node"].name].keys():
+            open.append({"node": Node(state, current_state["node"]), "price": current_state["price"] + (successors[current_state["node"].name])[state]})
+            # Sortiramo listu otvorenih po cijeni, u slučaju više stanja s istom cijenom sortiramo ih abecedno
+            open = sorted(open, key=lambda x: (x["price"], x["node"].name))
 
+    # Ukoliko je pretraživanje bilo neuspješno vraćamo potvrdu neuspješnosti
     return "no", None, None, None, None
 
+
+
+# Glavna funkcija 
 def main():
     algorithm, path_state, path_heuristic, optimistic, consistent = None, None, None, None, None
     for i in range(len(sys.argv)):
@@ -140,8 +177,8 @@ def main():
 
        # algorithm
 
-       start_state, end_state, successors = get_data(path_state)
-       heuristics = get_heuristics_data(path_heuristic)
+       start_state, end_state, successors = get_data("istra.txt")
+       heuristics = get_heuristics_data("istra_pessimistic_heuristic.txt")
 
        print(f"[FOUND_SOLUTION]: {found_solution}")
        if found_solution:
@@ -149,6 +186,7 @@ def main():
            print(f"[PATH_LENGTH]: {path_length}")
            print(f"[TOTAL_COST]: {total_cost}")
            print(f"[PATH]: {path}")
+
 
 
 if __name__ == "__main__":
@@ -165,3 +203,8 @@ if __name__ == "__main__":
 #
 # POKRENEMO TESTNI PRIMJER
 # python solution.py --alg astar --ss istra.txt --h istra_heuristic.txt
+
+# TODO: dodati implementaciju više end_statea
+# TODO: dodati implementaciju nepostojanja valuea za neke transitionse
+# TODO: prepraviti kod da nije state based (možda)
+# TODO: vidjeti vremenski prekid

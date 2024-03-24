@@ -13,7 +13,7 @@ def get_data(file):
     for i in range(len(data)):
         if data[i][0] != "#":
             if start_state != None and end_state == None:
-                end_state = data[i].rstrip("\n")
+                end_state = data[i].rstrip("\n")  
             elif start_state == None:
                 start_state = data[i].rstrip("\n")
             else: 
@@ -110,7 +110,7 @@ def main():
     if algorithm == "bfs":
        print("# BFS")
 
-       start_state, end_state, transitions = get_data('ai.txt')
+       start_state, end_state, transitions = get_data(path_state)
 
        found_solution, states_visited, path_length, total_cost, path = bfs(start_state, end_state, transitions)
 
@@ -124,7 +124,7 @@ def main():
     elif algorithm == "ucs":
        print("# UCS")
 
-       start_state, end_state, successors = get_data("ai.txt")
+       start_state, end_state, successors = get_data(path_state)
 
        found_solution, states_visited, path_length, total_cost, path = ucs(start_state, end_state, successors)
 
@@ -140,8 +140,8 @@ def main():
 
        # algorithm
 
-       start_state, end_state, successors = get_data("istra.txt")
-       heuristics = get_heuristics_data('istra_pessimistic_heuristic.txt')
+       start_state, end_state, successors = get_data(path_state)
+       heuristics = get_heuristics_data(path_heuristic)
 
        print(f"[FOUND_SOLUTION]: {found_solution}")
        if found_solution:
@@ -165,8 +165,3 @@ if __name__ == "__main__":
 #
 # POKRENEMO TESTNI PRIMJER
 # python solution.py --alg astar --ss istra.txt --h istra_heuristic.txt
-
-# TODO: dodati implementaciju više end_statea
-# TODO: dodati implementaciju nepostojanja valuea za neke transitionse
-# TODO: prepraviti kod da nije city based (možda)
-# TODO: vidjeti vremenski prekid

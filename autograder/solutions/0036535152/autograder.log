@@ -10,10 +10,10 @@ Skipping (python)
 === EVALUATION ===
 
 === TOTAL RESULTS ===
-8 / 32 tests passed. (25.00%)
+13 / 32 tests passed. (40.62%)
 
 == RESOLUTION ==
-  Passed 8 / 26 tests. Failed 18 tests.
+  Passed 13 / 26 tests. Failed 13 tests.
 
 == COOKING ==
   Passed 0 / 6 tests. Failed 6 tests.
@@ -25,198 +25,304 @@ Skipping (python)
 - Failed test: python solution.py resolution resolution_ai.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+prolaz_predmeta is unknown
 -> Expected output:
 prolaz_predmeta is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
-
-
-
-- Failed test: python solution.py resolution resolution_chicken_alfredo_nomilk.txt
-- Mismatch with field: CONCLUSION
--> Obtained output:
-clause is unknown
--> Expected output:
-chicken_alfredo is unknown
---> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ~lab1 v prolaz_labosi
+2. ~lab2 v prolaz_labosi
+3. ~lab3 v prolaz_labosi
+4. ~lab4 v prolaz_labosi
+7. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz v prolaz_kontinuirano
+8. ~prolaz_labosi v ~ispitni_rok1 v prolaz_kontinuirano v prolaz_rok
+9. ~prolaz_labosi v ~ispitni_rok2 v prolaz_rok
+10. ~prolaz_kontinuirano v prolaz_predmeta
+11. ~prolaz_rok v prolaz_predmeta
+12. lab1
+17. ispitni_rok1
+18. ~prolaz_predmeta
+18. ~prolaz_predmeta
+===============
+19. ~prolaz_kontinuirano (10, 18)
+19. ~prolaz_kontinuirano (10, 18)
+20. ~prolaz_rok (11, 18)
+21. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+21. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+21. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+21. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+22. ~prolaz_labosi v ~ispitni_rok1 v prolaz_rok (8, 19)
+24. ~mi_prolaz v ~zi_prolaz v ~lab1 (1, 21)
+===============
+[CONCLUSION]: prolaz_predmeta is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_chicken_alfredo.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+chicken_alfredo is unknown
 -> Expected output:
 chicken_alfredo is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ['pasta']
+2. ['olive_oil']
+3. ['chicken']
+4. ['butter']
+5. ['flour']
+6. ['milk']
+7. ['cream']
+8. ['parmesan']
+9. ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce']
+11. ['~chicken_alfredo']
+===============
+===============
+[CONCLUSION]: chicken_alfredo is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_chicken_broccoli_alfredo_big.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+chicken_broccoli_alfredo is unknown
 -> Expected output:
 chicken_broccoli_alfredo is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ['pasta']
+2. ['broccoli']
+3. ['olive_oil']
+4. ['chicken']
+5. ['butter']
+6. ['flour']
+7. ['milk']
+8. ['cream']
+9. ['parmesan']
+10. ['parsley']
+12. ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce']
+14. ['~chicken_broccoli_alfredo']
+===============
+===============
+[CONCLUSION]: chicken_broccoli_alfredo is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_coffee.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+coffee is unknown
 -> Expected output:
 coffee is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
-
-
-
-- Failed test: python solution.py resolution resolution_coffee_noheater.txt
-- Mismatch with field: CONCLUSION
--> Obtained output:
-clause is unknown
--> Expected output:
-coffee is unknown
---> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ['water']
+2. ['heater']
+3. ['coffee_powder']
+6. ['~coffee']
+===============
+===============
+[CONCLUSION]: coffee is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_coffee_or_tea.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+coffee v tea is unknown
 -> Expected output:
 coffee v tea is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ['water']
+2. ['heater']
+3. ['tea_bag']
+4. ['coffee_powder']
+8. ['~c']
+9. ['~t']
+===============
+===============
+[CONCLUSION]: coffee v tea is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_coffee_or_tea_nopowder.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+coffee v tea is unknown
 -> Expected output:
 coffee v tea is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ['water']
+2. ['heater']
+3. ['tea_bag']
+7. ['~c']
+8. ['~t']
+===============
+===============
+[CONCLUSION]: coffee v tea is unknown
 
 
 
-- Failed test: python solution.py resolution resolution_small_example_3.txt
+- Failed test: python solution.py resolution resolution_small_example_2.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
--> Expected output:
 c is unknown
---> Complete obtained output:
-[CONCLUSION]: clause is unknown
-
-
-
-- Failed test: python solution.py resolution resolution_heldout_small_2.txt
-- Mismatch with field: CONCLUSION
--> Obtained output:
-clause is unknown
 -> Expected output:
-c v b is unknown
+c is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
-
-
-
-- Failed test: python solution.py resolution resolution_heldout_tautology.txt
-- Mismatch with field: CONCLUSION
--> Obtained output:
-clause is unknown
--> Expected output:
-c is unknown
---> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. a
+2. b
+3. ~a v ~b v c
+4. ~c
+===============
+5. ~a v ~b (3, 4)
+5. ~a v ~b (3, 4)
+===============
+[CONCLUSION]: c is unknown
 
 
 
 - Failed test: python solution.py resolution resolution_heldout_tautology_2.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+c is unknown
 -> Expected output:
 c is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+3. ~a v ~d v c
+4. d
+5. a
+6. ~c
+===============
+7. ~a v ~d (3, 6)
+7. ~a v ~d (3, 6)
+===============
+[CONCLUSION]: c is unknown
 
 
 
-- Failed test: python solution.py resolution resolution_heldout_tautology_3.txt
+- Failed test: python solution.py resolution new_example_2.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+~c is unknown
 -> Expected output:
-a is unknown
+~c is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+2. b
+3. ~a v ~c
+4. a v ~b v ~c
+6. ~~c
+6. ~~c
+===============
+8. a v ~b (4, 6)
+===============
+[CONCLUSION]: ~c is unknown
 
 
 
-- Failed test: python solution.py resolution resolution_heldout_tautology_4.txt
+- Failed test: python solution.py resolution new_example_3.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+~c is unknown
 -> Expected output:
-a v b is unknown
+~c is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
-
-
-
-- Failed test: python solution.py resolution new_example_1.txt
-- Mismatch with field: CONCLUSION
--> Obtained output:
-clause is unknown
--> Expected output:
-c is unknown
---> Complete obtained output:
-[CONCLUSION]: clause is unknown
+2. b
+3. ~a v ~c
+4. a v ~b v ~c
+6. ~~c
+6. ~~c
+===============
+8. a v ~b (4, 6)
+===============
+[CONCLUSION]: ~c is unknown
 
 
 
 - Failed test: python solution.py resolution new_example_4.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+d is unknown
 -> Expected output:
 d is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+2. b v d
+3. d v ~c
+5. a v ~b v ~c
+6. b v c v ~d v a
+7. c v ~b
+8. ~d
+8. ~d
+===============
+9. b (2, 8)
+9. b (2, 8)
+10. ~c (3, 8)
+===============
+[CONCLUSION]: d is unknown
 
 
 
 - Failed test: python solution.py resolution new_example_5.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+e is unknown
 -> Expected output:
 e is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ~a v ~b v d v f
+2. b v d v e
+3. d v ~c v ~f
+4. c v ~a v ~b
+5. a v ~b v ~c
+6. e v ~d
+7. b v c v ~d v f v a
+8. c v ~b v d
+9. ~e
+9. ~e
+===============
+10. b v d (2, 9)
+10. b v d (2, 9)
+10. b v d (2, 9)
+10. b v d (2, 9)
+10. b v d (2, 9)
+11. ~d (6, 9)
+===============
+[CONCLUSION]: e is unknown
 
 
 
 - Failed test: python solution.py resolution new_example_6.txt
 - Mismatch with field: CONCLUSION
 -> Obtained output:
-clause is unknown
+a is unknown
 -> Expected output:
 a is true
 --> Complete obtained output:
-[CONCLUSION]: clause is unknown
+1. ~a v b v ~d
+3. d v ~c
+4. f v ~h
+5. ~c v ~a v ~b
+6. a v ~b v e v ~g v ~h
+7. c v d v a
+8. c v ~g v f
+9. g v f
+10. ~e v ~g
+11. ~d v ~g v f v h
+13. a v ~c v e v ~f v h
+14. ~d v ~f
+15. h v ~c v ~b v a v ~d
+16. ~a
+16. ~a
+16. ~a
+16. ~a
+===============
+17. ~b v e v ~g v ~h (6, 16)
+17. ~b v e v ~g v ~h (6, 16)
+17. ~b v e v ~g v ~h (6, 16)
+17. ~b v e v ~g v ~h (6, 16)
+18. c v d (7, 16)
+18. c v d (7, 16)
+18. c v d (7, 16)
+19. ~c v e v ~f v h (13, 16)
+19. ~c v e v ~f v h (13, 16)
+===============
+[CONCLUSION]: a is unknown
 
 
 == PASSED TESTS ==
@@ -228,35 +334,56 @@ a is true
 3. a
 4. ~c
 ===============
-5. b (1, 3)
-6. c (2, 5)
-7. NIL (4, 6)
+5. ~b (2, 4)
+6. ~a (1, 5)
+7. NIL (3, 6)
 ===============
 [CONCLUSION]: c is true
 
-- Passed test: resolution resolution_small_example_2.txt
+- Passed test: resolution resolution_chicken_alfredo_nomilk.txt
 -> Complete obtained output:
-1. a
-2. b
-3. ~a v ~b v c
-4. ~c
+1. ['pasta']
+2. ['olive_oil']
+3. ['chicken']
+4. ['butter']
+5. ['flour']
+6. ['cream']
+7. ['parmesan']
+8. ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce']
+10. ['~chicken_alfredo']
 ===============
-5. ~b v c (1, 3)
-6. c (2, 5)
-7. NIL (4, 6)
 ===============
-[CONCLUSION]: c is true
+[CONCLUSION]: chicken_alfredo is unknown
+
+- Passed test: resolution resolution_coffee_noheater.txt
+-> Complete obtained output:
+1. ['water']
+2. ['coffee_powder']
+5. ['~coffee']
+===============
+===============
+[CONCLUSION]: coffee is unknown
+
+- Passed test: resolution resolution_small_example_3.txt
+-> Complete obtained output:
+1. ~a v b
+2. ~b v c
+3. ~c
+===============
+4. ~b (2, 3)
+===============
+[CONCLUSION]: c is unknown
 
 - Passed test: resolution resolution_small_example_4.txt
 -> Complete obtained output:
 1. ~a v b
 2. ~b v c
 3. a
-4. ~c v b
+4. ~c
+5. ~b
 ===============
-5. b (1, 3)
-6. c (2, 5)
-7. NIL (4, 6)
+7. ~a (1, 5)
+8. NIL (3, 7)
 ===============
 [CONCLUSION]: c v b is true
 
@@ -269,6 +396,43 @@ a is true
 ===============
 [CONCLUSION]: a is true
 
+- Passed test: resolution resolution_heldout_small_2.txt
+-> Complete obtained output:
+1. ['a']
+2. ['~b']
+3. ['~c']
+===============
+===============
+[CONCLUSION]: b v c is unknown
+
+- Passed test: resolution resolution_heldout_tautology.txt
+-> Complete obtained output:
+1. ['~a', 'b']
+3. ['a']
+4. ['~c']
+===============
+===============
+[CONCLUSION]: c is unknown
+
+- Passed test: resolution resolution_heldout_tautology_3.txt
+-> Complete obtained output:
+2. ['d']
+3. ['~a']
+4. ['~a']
+===============
+===============
+[CONCLUSION]: a is unknown
+
+- Passed test: resolution resolution_heldout_tautology_4.txt
+-> Complete obtained output:
+2. ['d']
+3. ['~a', '~d']
+4. ['~a']
+5. ['~b']
+===============
+===============
+[CONCLUSION]: a v b is unknown
+
 - Passed test: resolution resolution_heldout_large_chain.txt
 -> Complete obtained output:
 1. a
@@ -280,13 +444,13 @@ a is true
 7. ~f v g
 8. ~g
 ===============
-9. b (1, 2)
-10. c (3, 9)
-11. d (4, 10)
-12. e (5, 11)
-13. f (6, 12)
-14. g (7, 13)
-15. NIL (8, 14)
+9. ~f (7, 8)
+10. ~e (6, 9)
+11. ~d (5, 10)
+12. ~c (4, 11)
+13. ~b (3, 12)
+14. ~a (2, 13)
+15. NIL (1, 14)
 ===============
 [CONCLUSION]: g is true
 
@@ -295,43 +459,25 @@ a is true
 1. ~a v b
 2. ~b v ~c
 3. a
-4. c
+4. ~~c
 ===============
-5. b (1, 3)
-6. ~c (2, 5)
-7. NIL (4, 6)
-===============
-[CONCLUSION]: ~c is true
-
-- Passed test: resolution new_example_2.txt
--> Complete obtained output:
-1. ~a v b v c
-2. b
-3. ~a v ~c
-4. a v ~b v ~c
-5. b v c
-6. c
-===============
-7. a v ~c (2, 4)
-8. ~c v ~c (3, 7)
-9. NIL (6, 8)
+5. ~b (2, 4)
+6. ~a (1, 5)
+7. NIL (3, 6)
 ===============
 [CONCLUSION]: ~c is true
 
-- Passed test: resolution new_example_3.txt
+- Passed test: resolution new_example_1.txt
 -> Complete obtained output:
-1. ~a v b v c v ~c
-2. b
-3. ~a v ~c
-4. a v ~b v ~c
-5. b v c
-6. c
+2. ~a v ~c
+3. a v ~b
+4. b v c
+5. ~c
 ===============
-7. a v ~c (2, 4)
-8. ~c v ~c (3, 7)
-9. NIL (6, 8)
+6. b (4, 5)
+7. a (3, 6)
 ===============
-[CONCLUSION]: ~c is true
+[CONCLUSION]: c is unknown
 
 == COOKING ==
 

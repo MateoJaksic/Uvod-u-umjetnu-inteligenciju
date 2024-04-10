@@ -29,25 +29,6 @@ a is unknown
 -> Expected output:
 a is true
 --> Complete obtained output:
-['a']
-[(1, ['~a', 'b', '~d'], (None, None)), (2, ['b', 'd', 'c', 'e', 'a'], (None, None)), (3, ['d', '~c'], (None, None)), (4, ['f', '~h'], (None, None)), (5, ['~c', '~a', '~b'], (None, None)), (6, ['a', '~b', 'e', '~g', '~h'], (None, None)), (7, ['c', 'd', 'a'], (None, None)), (8, ['c', '~g', 'f'], (None, None)), (9, ['g', 'f'], (None, None)), (10, ['~e', '~g'], (None, None)), (11, ['~d', '~g', 'f', 'h'], (None, None)), (12, ['a', 'b', 'e', 'g', '~h', 'd', '~c', '~f'], (None, None)), (13, ['a', '~c', 'e', '~f', 'h'], (None, None)), (14, ['~d', '~f'], (None, None)), (15, ['h', '~c', '~b', 'a', '~d'], (None, None)), (16, ['~a'], (None, None))]
-(1, ['~a', 'b', '~d'], (None, None))
-(2, ['b', 'd', 'c', 'e', 'a'], (None, None))
-(3, ['d', '~c'], (None, None))
-(4, ['f', '~h'], (None, None))
-(5, ['~c', '~a', '~b'], (None, None))
-(6, ['a', '~b', 'e', '~g', '~h'], (None, None))
-(7, ['c', 'd', 'a'], (None, None))
-(8, ['c', '~g', 'f'], (None, None))
-(9, ['g', 'f'], (None, None))
-(10, ['~e', '~g'], (None, None))
-(11, ['~d', '~g', 'f', 'h'], (None, None))
-(12, ['a', 'b', 'e', 'g', '~h', 'd', '~c', '~f'], (None, None))
-(13, ['a', '~c', 'e', '~f', 'h'], (None, None))
-(14, ['~d', '~f'], (None, None))
-(15, ['h', '~c', '~b', 'a', '~d'], (None, None))
-(16, ['~a'], (None, None))
-[None, None, (3, ['d', '~c'], (None, None)), (4, ['f', '~h'], (None, None)), None, (6, ['a', '~b', 'e', '~g', '~h'], (None, None)), (7, ['c', 'd', 'a'], (None, None)), (8, ['c', '~g', 'f'], (None, None)), (9, ['g', 'f'], (None, None)), (10, ['~e', '~g'], (None, None)), (11, ['~d', '~g', 'f', 'h'], (None, None)), None, (13, ['a', '~c', 'e', '~f', 'h'], (None, None)), (14, ['~d', '~f'], (None, None)), (15, ['h', '~c', '~b', 'a', '~d'], (None, None)), (16, ['~a'], (None, None))]
 FIRST CLAUSE FOR PETLJA (16, ['~a'], (None, None))
    LITERAL FOR PETLJA ~a
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (16, ['~a'], (None, None))
@@ -57,10 +38,10 @@ FIRST CLAUSE FOR PETLJA (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['a', '~b', 'e', '~g', '~h'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~a'], (None, None)) - (6, ['a', '~b', 'e', '~g', '~h'], (None, None)) - ~a
-            NOVA KLAUZULA JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
+            NOVA KLAUZULA JE (18, ['~b', 'e', '~g', '~h'], (6, 16))
       SECOND CLAUSE FOR PETLJA (7, ['c', 'd', 'a'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~a'], (None, None)) - (7, ['c', 'd', 'a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (18, ['c', 'd'], (7, 16))
+            NOVA KLAUZULA JE (19, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA (8, ['c', '~g', 'f'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['g', 'f'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (10, ['~e', '~g'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
@@ -68,11 +49,11 @@ FIRST CLAUSE FOR PETLJA (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (13, ['a', '~c', 'e', '~f', 'h'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~a'], (None, None)) - (13, ['a', '~c', 'e', '~f', 'h'], (None, None)) - ~a
-            NOVA KLAUZULA JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+            NOVA KLAUZULA JE (20, ['~c', 'e', '~f', 'h'], (13, 16))
       SECOND CLAUSE FOR PETLJA (14, ['~d', '~f'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (15, ['h', '~c', '~b', 'a', '~d'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~a'], (None, None)) - (15, ['h', '~c', '~b', 'a', '~d'], (None, None)) - ~a
-            NOVA KLAUZULA JE (20, ['h', '~c', '~b', '~d'], (15, 16))
+            NOVA KLAUZULA JE (21, ['h', '~c', '~b', '~d'], (15, 16))
       SECOND CLAUSE FOR PETLJA (16, ['~a'], (None, None)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (17, ['~b', 'e', '~g', '~h'], (6, 16)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
       SECOND CLAUSE FOR PETLJA (18, ['c', 'd'], (7, 16)), A FIRST CLAUSE JE (16, ['~a'], (None, None))
@@ -112,7 +93,7 @@ FIRST CLAUSE FOR PETLJA (17, ['~b', 'e', '~g', '~h'], (6, 16))
       SECOND CLAUSE FOR PETLJA (9, ['g', 'f'], (None, None)), A FIRST CLAUSE JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
       SECOND CLAUSE FOR PETLJA (10, ['~e', '~g'], (None, None)), A FIRST CLAUSE JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (17, ['~b', 'e', '~g', '~h'], (6, 16)) - (10, ['~e', '~g'], (None, None)) - e
-            NOVA KLAUZULA JE (21, ['~b', '~g', '~h'], (10, 17))
+            NOVA KLAUZULA JE (22, ['~b', '~g', '~h'], (10, 17))
       SECOND CLAUSE FOR PETLJA (11, ['~d', '~g', 'f', 'h'], (None, None)), A FIRST CLAUSE JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~b', 'e', '~g', '~h'], (6, 16))
@@ -132,7 +113,7 @@ FIRST CLAUSE FOR PETLJA (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA (3, ['d', '~c'], (None, None)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['c', 'd'], (7, 16)) - (3, ['d', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (22, ['d'], (3, 18))
+            NOVA KLAUZULA JE (23, ['d'], (3, 18))
       SECOND CLAUSE FOR PETLJA (4, ['f', '~h'], (None, None)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
@@ -150,10 +131,27 @@ FIRST CLAUSE FOR PETLJA (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
       SECOND CLAUSE FOR PETLJA (19, ['~c', 'e', '~f', 'h'], (13, 16)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['c', 'd'], (7, 16)) - (19, ['~c', 'e', '~f', 'h'], (13, 16)) - c
-            NOVA KLAUZULA JE None
+            NOVA KLAUZULA JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
       SECOND CLAUSE FOR PETLJA (20, ['h', '~c', '~b', '~d'], (15, 16)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['c', 'd'], (7, 16)) - (20, ['h', '~c', '~b', '~d'], (15, 16)) - c
-            NOVA KLAUZULA JE None
+            NOVA KLAUZULA JE (20, ['h', '~c', '~b', '~d'], (15, 16))
+      SECOND CLAUSE FOR PETLJA (21, ['~b', '~g', '~h'], (10, 17)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
+      SECOND CLAUSE FOR PETLJA (22, ['d'], (3, 18)), A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['c', 'd'], (7, 16))
+   LITERAL FOR PETLJA d
+FIRST CLAUSE FOR PETLJA (19, ['~c', 'e', '~f', 'h'], (13, 16))
+   LITERAL FOR PETLJA ~c
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA (4, ['f', '~h'], (None, None)), A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+      SECOND CLAUSE FOR PETLJA (8, ['c', '~g', 'f'], (None, None)), A FIRST CLAUSE JE (19, ['~c', 'e', '~f', 'h'], (13, 16))
+         PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['~c', 'e', '~f', 'h'], (13, 16)) - (8, ['c', '~g', 'f'], (None, None)) - ~c
+            NOVA KLAUZULA JE (26, ['e', '~f', 'h', '~g', 'f'], (8, 19))
 ===============
 ===============
 [CONCLUSION]: a is unknown
@@ -163,19 +161,12 @@ FIRST CLAUSE FOR PETLJA (18, ['c', 'd'], (7, 16))
 
 - Passed test: resolution resolution_small_example.txt
 -> Complete obtained output:
-['c']
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', 'c'], (None, None)), (3, ['a'], (None, None)), (4, ['~c'], (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['~b', 'c'], (None, None))
-(3, ['a'], (None, None))
-(4, ['~c'], (None, None))
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', 'c'], (None, None)), (3, ['a'], (None, None)), (4, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (4, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['~b', 'c'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (4, ['~c'], (None, None)) - (2, ['~b', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (5, ['~b'], (2, 4))
+            NOVA KLAUZULA JE (6, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~c'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~b'], (2, 4)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
@@ -183,7 +174,7 @@ FIRST CLAUSE FOR PETLJA (5, ['~b'], (2, 4))
    LITERAL FOR PETLJA ~b
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~b'], (2, 4)) - (1, ['~a', 'b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (6, ['~a'], (1, 5))
+            NOVA KLAUZULA JE (7, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (5, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (4, ['~c'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
@@ -195,7 +186,7 @@ FIRST CLAUSE FOR PETLJA (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (6, ['~a'], (1, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~a'], (1, 5)) - (3, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (7, [], (3, 6))
+            NOVA KLAUZULA JE (8, [], (3, 6))
 1. ~a v b
 2. ~b v c
 3. a
@@ -203,33 +194,14 @@ FIRST CLAUSE FOR PETLJA (6, ['~a'], (1, 5))
 ===============
 5. ~b (2, 4)
 6. ~a (1, 5)
-7. NIL (3, 6)
+6. ~b (2, 4)
+7. ~a (1, 5)
+8. NIL (3, 6)
 ===============
 [CONCLUSION]: c is true
 
 - Passed test: resolution resolution_ai.txt
 -> Complete obtained output:
-['prolaz_predmeta']
-[(1, ['~lab1', 'prolaz_labosi'], (None, None)), (2, ['~lab2', 'prolaz_labosi'], (None, None)), (3, ['~lab3', 'prolaz_labosi'], (None, None)), (4, ['~lab4', 'prolaz_labosi'], (None, None)), (5, ['~mi_teorija', '~mi_pismeni', 'mi_prolaz'], (None, None)), (6, ['~zi_teorija', '~zi_pismeni', 'zi_prolaz'], (None, None)), (7, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz', 'prolaz_kontinuirano'], (None, None)), (8, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_kontinuirano', 'prolaz_rok'], (None, None)), (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)), (10, ['~prolaz_kontinuirano', 'prolaz_predmeta'], (None, None)), (11, ['~prolaz_rok', 'prolaz_predmeta'], (None, None)), (12, ['lab1'], (None, None)), (13, ['mi_teorija'], (None, None)), (14, ['~mi_pismeni'], (None, None)), (15, ['~zi_teorija'], (None, None)), (16, ['zi_pismeni'], (None, None)), (17, ['ispitni_rok1'], (None, None)), (18, ['~prolaz_predmeta'], (None, None))]
-(1, ['~lab1', 'prolaz_labosi'], (None, None))
-(2, ['~lab2', 'prolaz_labosi'], (None, None))
-(3, ['~lab3', 'prolaz_labosi'], (None, None))
-(4, ['~lab4', 'prolaz_labosi'], (None, None))
-(5, ['~mi_teorija', '~mi_pismeni', 'mi_prolaz'], (None, None))
-(6, ['~zi_teorija', '~zi_pismeni', 'zi_prolaz'], (None, None))
-(7, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz', 'prolaz_kontinuirano'], (None, None))
-(8, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_kontinuirano', 'prolaz_rok'], (None, None))
-(9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None))
-(10, ['~prolaz_kontinuirano', 'prolaz_predmeta'], (None, None))
-(11, ['~prolaz_rok', 'prolaz_predmeta'], (None, None))
-(12, ['lab1'], (None, None))
-(13, ['mi_teorija'], (None, None))
-(14, ['~mi_pismeni'], (None, None))
-(15, ['~zi_teorija'], (None, None))
-(16, ['zi_pismeni'], (None, None))
-(17, ['ispitni_rok1'], (None, None))
-(18, ['~prolaz_predmeta'], (None, None))
-[(1, ['~lab1', 'prolaz_labosi'], (None, None)), (2, ['~lab2', 'prolaz_labosi'], (None, None)), (3, ['~lab3', 'prolaz_labosi'], (None, None)), (4, ['~lab4', 'prolaz_labosi'], (None, None)), None, None, (7, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz', 'prolaz_kontinuirano'], (None, None)), (8, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_kontinuirano', 'prolaz_rok'], (None, None)), (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)), (10, ['~prolaz_kontinuirano', 'prolaz_predmeta'], (None, None)), (11, ['~prolaz_rok', 'prolaz_predmeta'], (None, None)), (12, ['lab1'], (None, None)), (13, ['mi_teorija'], (None, None)), (14, ['~mi_pismeni'], (None, None)), (15, ['~zi_teorija'], (None, None)), (16, ['zi_pismeni'], (None, None)), (17, ['ispitni_rok1'], (None, None)), (18, ['~prolaz_predmeta'], (None, None))]
 FIRST CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None))
    LITERAL FOR PETLJA ~prolaz_predmeta
       SECOND CLAUSE FOR PETLJA (1, ['~lab1', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
@@ -243,10 +215,10 @@ FIRST CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
       SECOND CLAUSE FOR PETLJA (10, ['~prolaz_kontinuirano', 'prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~prolaz_predmeta'], (None, None)) - (10, ['~prolaz_kontinuirano', 'prolaz_predmeta'], (None, None)) - ~prolaz_predmeta
-            NOVA KLAUZULA JE (19, ['~prolaz_kontinuirano'], (10, 18))
+            NOVA KLAUZULA JE (20, ['~prolaz_kontinuirano'], (10, 18))
       SECOND CLAUSE FOR PETLJA (11, ['~prolaz_rok', 'prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~prolaz_predmeta'], (None, None)) - (11, ['~prolaz_rok', 'prolaz_predmeta'], (None, None)) - ~prolaz_predmeta
-            NOVA KLAUZULA JE (20, ['~prolaz_rok'], (11, 18))
+            NOVA KLAUZULA JE (21, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (12, ['lab1'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
       SECOND CLAUSE FOR PETLJA (13, ['mi_teorija'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
       SECOND CLAUSE FOR PETLJA (14, ['~mi_pismeni'], (None, None)), A FIRST CLAUSE JE (18, ['~prolaz_predmeta'], (None, None))
@@ -266,10 +238,10 @@ FIRST CLAUSE FOR PETLJA (19, ['~prolaz_kontinuirano'], (10, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
       SECOND CLAUSE FOR PETLJA (7, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz', 'prolaz_kontinuirano'], (None, None)), A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['~prolaz_kontinuirano'], (10, 18)) - (7, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz', 'prolaz_kontinuirano'], (None, None)) - ~prolaz_kontinuirano
-            NOVA KLAUZULA JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
+            NOVA KLAUZULA JE (22, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
       SECOND CLAUSE FOR PETLJA (8, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_kontinuirano', 'prolaz_rok'], (None, None)), A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['~prolaz_kontinuirano'], (10, 18)) - (8, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_kontinuirano', 'prolaz_rok'], (None, None)) - ~prolaz_kontinuirano
-            NOVA KLAUZULA JE (22, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_rok'], (8, 19))
+            NOVA KLAUZULA JE (23, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_rok'], (8, 19))
       SECOND CLAUSE FOR PETLJA (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)), A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~prolaz_kontinuirano'], (10, 18))
@@ -296,7 +268,7 @@ FIRST CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['~prolaz_rok'], (11, 18)) - (9, ['~prolaz_labosi', '~ispitni_rok2', 'prolaz_rok'], (None, None)) - ~prolaz_rok
-            NOVA KLAUZULA JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
+            NOVA KLAUZULA JE (24, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (12, ['lab1'], (None, None)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
@@ -311,23 +283,23 @@ FIRST CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (22, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_rok'], (8, 19)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['~prolaz_rok'], (11, 18)) - (22, ['~prolaz_labosi', '~ispitni_rok1', 'prolaz_rok'], (8, 19)) - ~prolaz_rok
-            NOVA KLAUZULA JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
+            NOVA KLAUZULA JE (25, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
       SECOND CLAUSE FOR PETLJA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
       SECOND CLAUSE FOR PETLJA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20)), A FIRST CLAUSE JE (20, ['~prolaz_rok'], (11, 18))
 FIRST CLAUSE FOR PETLJA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
    LITERAL FOR PETLJA ~prolaz_labosi
       SECOND CLAUSE FOR PETLJA (1, ['~lab1', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19)) - (1, ['~lab1', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
+            NOVA KLAUZULA JE (26, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
       SECOND CLAUSE FOR PETLJA (2, ['~lab2', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19)) - (2, ['~lab2', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (26, ['~mi_prolaz', '~zi_prolaz', '~lab2'], (2, 21))
+            NOVA KLAUZULA JE (27, ['~mi_prolaz', '~zi_prolaz', '~lab2'], (2, 21))
       SECOND CLAUSE FOR PETLJA (3, ['~lab3', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19)) - (3, ['~lab3', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (27, ['~mi_prolaz', '~zi_prolaz', '~lab3'], (3, 21))
+            NOVA KLAUZULA JE (28, ['~mi_prolaz', '~zi_prolaz', '~lab3'], (3, 21))
       SECOND CLAUSE FOR PETLJA (4, ['~lab4', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19)) - (4, ['~lab4', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (28, ['~mi_prolaz', '~zi_prolaz', '~lab4'], (4, 21))
+            NOVA KLAUZULA JE (29, ['~mi_prolaz', '~zi_prolaz', '~lab4'], (4, 21))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (21, ['~prolaz_labosi', '~mi_prolaz', '~zi_prolaz'], (7, 19))
@@ -359,16 +331,16 @@ FIRST CLAUSE FOR PETLJA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
    LITERAL FOR PETLJA ~prolaz_labosi
       SECOND CLAUSE FOR PETLJA (1, ['~lab1', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20)) - (1, ['~lab1', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
+            NOVA KLAUZULA JE (30, ['~ispitni_rok2', '~lab1'], (1, 23))
       SECOND CLAUSE FOR PETLJA (2, ['~lab2', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20)) - (2, ['~lab2', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (30, ['~ispitni_rok2', '~lab2'], (2, 23))
+            NOVA KLAUZULA JE (31, ['~ispitni_rok2', '~lab2'], (2, 23))
       SECOND CLAUSE FOR PETLJA (3, ['~lab3', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20)) - (3, ['~lab3', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (31, ['~ispitni_rok2', '~lab3'], (3, 23))
+            NOVA KLAUZULA JE (32, ['~ispitni_rok2', '~lab3'], (3, 23))
       SECOND CLAUSE FOR PETLJA (4, ['~lab4', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20)) - (4, ['~lab4', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (32, ['~ispitni_rok2', '~lab4'], (4, 23))
+            NOVA KLAUZULA JE (33, ['~ispitni_rok2', '~lab4'], (4, 23))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (23, ['~prolaz_labosi', '~ispitni_rok2'], (9, 20))
@@ -402,16 +374,16 @@ FIRST CLAUSE FOR PETLJA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
    LITERAL FOR PETLJA ~prolaz_labosi
       SECOND CLAUSE FOR PETLJA (1, ['~lab1', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20)) - (1, ['~lab1', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
+            NOVA KLAUZULA JE (34, ['~ispitni_rok1', '~lab1'], (1, 24))
       SECOND CLAUSE FOR PETLJA (2, ['~lab2', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20)) - (2, ['~lab2', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
+            NOVA KLAUZULA JE (35, ['~ispitni_rok1', '~lab2'], (2, 24))
       SECOND CLAUSE FOR PETLJA (3, ['~lab3', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20)) - (3, ['~lab3', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
+            NOVA KLAUZULA JE (36, ['~ispitni_rok1', '~lab3'], (3, 24))
       SECOND CLAUSE FOR PETLJA (4, ['~lab4', 'prolaz_labosi'], (None, None)), A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20)) - (4, ['~lab4', 'prolaz_labosi'], (None, None)) - ~prolaz_labosi
-            NOVA KLAUZULA JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
+            NOVA KLAUZULA JE (37, ['~ispitni_rok1', '~lab4'], (4, 24))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (24, ['~prolaz_labosi', '~ispitni_rok1'], (22, 20))
@@ -534,7 +506,7 @@ FIRST CLAUSE FOR PETLJA (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
       SECOND CLAUSE FOR PETLJA (12, ['lab1'], (None, None)), A FIRST CLAUSE JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21)) - (12, ['lab1'], (None, None)) - ~lab1
-            NOVA KLAUZULA JE (37, ['~mi_prolaz', '~zi_prolaz'], (12, 25))
+            NOVA KLAUZULA JE (38, ['~mi_prolaz', '~zi_prolaz'], (12, 25))
       SECOND CLAUSE FOR PETLJA (13, ['mi_teorija'], (None, None)), A FIRST CLAUSE JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
       SECOND CLAUSE FOR PETLJA (14, ['~mi_pismeni'], (None, None)), A FIRST CLAUSE JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
       SECOND CLAUSE FOR PETLJA (15, ['~zi_teorija'], (None, None)), A FIRST CLAUSE JE (25, ['~mi_prolaz', '~zi_prolaz', '~lab1'], (1, 21))
@@ -616,7 +588,7 @@ FIRST CLAUSE FOR PETLJA (29, ['~ispitni_rok2', '~lab1'], (1, 23))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
       SECOND CLAUSE FOR PETLJA (12, ['lab1'], (None, None)), A FIRST CLAUSE JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (29, ['~ispitni_rok2', '~lab1'], (1, 23)) - (12, ['lab1'], (None, None)) - ~lab1
-            NOVA KLAUZULA JE (38, ['~ispitni_rok2'], (12, 29))
+            NOVA KLAUZULA JE (39, ['~ispitni_rok2'], (12, 29))
       SECOND CLAUSE FOR PETLJA (13, ['mi_teorija'], (None, None)), A FIRST CLAUSE JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
       SECOND CLAUSE FOR PETLJA (14, ['~mi_pismeni'], (None, None)), A FIRST CLAUSE JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
       SECOND CLAUSE FOR PETLJA (15, ['~zi_teorija'], (None, None)), A FIRST CLAUSE JE (29, ['~ispitni_rok2', '~lab1'], (1, 23))
@@ -666,7 +638,7 @@ FIRST CLAUSE FOR PETLJA (33, ['~ispitni_rok1', '~lab1'], (1, 24))
       SECOND CLAUSE FOR PETLJA (16, ['zi_pismeni'], (None, None)), A FIRST CLAUSE JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
       SECOND CLAUSE FOR PETLJA (17, ['ispitni_rok1'], (None, None)), A FIRST CLAUSE JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (33, ['~ispitni_rok1', '~lab1'], (1, 24)) - (17, ['ispitni_rok1'], (None, None)) - ~ispitni_rok1
-            NOVA KLAUZULA JE (39, ['~lab1'], (17, 33))
+            NOVA KLAUZULA JE (40, ['~lab1'], (17, 33))
       SECOND CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
       SECOND CLAUSE FOR PETLJA (19, ['~prolaz_kontinuirano'], (10, 18)), A FIRST CLAUSE JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
       SECOND CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18)), A FIRST CLAUSE JE (33, ['~ispitni_rok1', '~lab1'], (1, 24))
@@ -710,7 +682,7 @@ FIRST CLAUSE FOR PETLJA (34, ['~ispitni_rok1', '~lab2'], (2, 24))
       SECOND CLAUSE FOR PETLJA (16, ['zi_pismeni'], (None, None)), A FIRST CLAUSE JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
       SECOND CLAUSE FOR PETLJA (17, ['ispitni_rok1'], (None, None)), A FIRST CLAUSE JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (34, ['~ispitni_rok1', '~lab2'], (2, 24)) - (17, ['ispitni_rok1'], (None, None)) - ~ispitni_rok1
-            NOVA KLAUZULA JE (40, ['~lab2'], (17, 34))
+            NOVA KLAUZULA JE (41, ['~lab2'], (17, 34))
       SECOND CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
       SECOND CLAUSE FOR PETLJA (19, ['~prolaz_kontinuirano'], (10, 18)), A FIRST CLAUSE JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
       SECOND CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18)), A FIRST CLAUSE JE (34, ['~ispitni_rok1', '~lab2'], (2, 24))
@@ -755,7 +727,7 @@ FIRST CLAUSE FOR PETLJA (35, ['~ispitni_rok1', '~lab3'], (3, 24))
       SECOND CLAUSE FOR PETLJA (16, ['zi_pismeni'], (None, None)), A FIRST CLAUSE JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
       SECOND CLAUSE FOR PETLJA (17, ['ispitni_rok1'], (None, None)), A FIRST CLAUSE JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (35, ['~ispitni_rok1', '~lab3'], (3, 24)) - (17, ['ispitni_rok1'], (None, None)) - ~ispitni_rok1
-            NOVA KLAUZULA JE (41, ['~lab3'], (17, 35))
+            NOVA KLAUZULA JE (42, ['~lab3'], (17, 35))
       SECOND CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
       SECOND CLAUSE FOR PETLJA (19, ['~prolaz_kontinuirano'], (10, 18)), A FIRST CLAUSE JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
       SECOND CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18)), A FIRST CLAUSE JE (35, ['~ispitni_rok1', '~lab3'], (3, 24))
@@ -801,7 +773,7 @@ FIRST CLAUSE FOR PETLJA (36, ['~ispitni_rok1', '~lab4'], (4, 24))
       SECOND CLAUSE FOR PETLJA (16, ['zi_pismeni'], (None, None)), A FIRST CLAUSE JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
       SECOND CLAUSE FOR PETLJA (17, ['ispitni_rok1'], (None, None)), A FIRST CLAUSE JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (36, ['~ispitni_rok1', '~lab4'], (4, 24)) - (17, ['ispitni_rok1'], (None, None)) - ~ispitni_rok1
-            NOVA KLAUZULA JE (42, ['~lab4'], (17, 36))
+            NOVA KLAUZULA JE (43, ['~lab4'], (17, 36))
       SECOND CLAUSE FOR PETLJA (18, ['~prolaz_predmeta'], (None, None)), A FIRST CLAUSE JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
       SECOND CLAUSE FOR PETLJA (19, ['~prolaz_kontinuirano'], (10, 18)), A FIRST CLAUSE JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
       SECOND CLAUSE FOR PETLJA (20, ['~prolaz_rok'], (11, 18)), A FIRST CLAUSE JE (36, ['~ispitni_rok1', '~lab4'], (4, 24))
@@ -974,7 +946,7 @@ FIRST CLAUSE FOR PETLJA (39, ['~lab1'], (17, 33))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (39, ['~lab1'], (17, 33))
       SECOND CLAUSE FOR PETLJA (12, ['lab1'], (None, None)), A FIRST CLAUSE JE (39, ['~lab1'], (17, 33))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (39, ['~lab1'], (17, 33)) - (12, ['lab1'], (None, None)) - ~lab1
-            NOVA KLAUZULA JE (43, [], (12, 39))
+            NOVA KLAUZULA JE (44, [], (12, 39))
 1. ~lab1 v prolaz_labosi
 2. ~lab2 v prolaz_labosi
 3. ~lab3 v prolaz_labosi
@@ -989,48 +961,48 @@ FIRST CLAUSE FOR PETLJA (39, ['~lab1'], (17, 33))
 18. ~prolaz_predmeta
 ===============
 19. ~prolaz_kontinuirano (10, 18)
+20. ~prolaz_kontinuirano (10, 18)
 20. ~prolaz_rok (11, 18)
 21. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+21. ~prolaz_rok (11, 18)
 22. ~prolaz_labosi v ~ispitni_rok1 v prolaz_rok (8, 19)
+22. ~prolaz_labosi v ~mi_prolaz v ~zi_prolaz (7, 19)
+23. ~prolaz_labosi v ~ispitni_rok1 v prolaz_rok (8, 19)
 23. ~prolaz_labosi v ~ispitni_rok2 (9, 20)
 24. ~prolaz_labosi v ~ispitni_rok1 (22, 20)
+24. ~prolaz_labosi v ~ispitni_rok2 (9, 20)
 25. ~mi_prolaz v ~zi_prolaz v ~lab1 (1, 21)
-26. ~mi_prolaz v ~zi_prolaz v ~lab2 (2, 21)
-27. ~mi_prolaz v ~zi_prolaz v ~lab3 (3, 21)
-28. ~mi_prolaz v ~zi_prolaz v ~lab4 (4, 21)
+25. ~prolaz_labosi v ~ispitni_rok1 (22, 20)
+26. ~mi_prolaz v ~zi_prolaz v ~lab1 (1, 21)
+27. ~mi_prolaz v ~zi_prolaz v ~lab2 (2, 21)
+28. ~mi_prolaz v ~zi_prolaz v ~lab3 (3, 21)
 29. ~ispitni_rok2 v ~lab1 (1, 23)
-30. ~ispitni_rok2 v ~lab2 (2, 23)
-31. ~ispitni_rok2 v ~lab3 (3, 23)
-32. ~ispitni_rok2 v ~lab4 (4, 23)
+29. ~mi_prolaz v ~zi_prolaz v ~lab4 (4, 21)
+30. ~ispitni_rok2 v ~lab1 (1, 23)
+31. ~ispitni_rok2 v ~lab2 (2, 23)
+32. ~ispitni_rok2 v ~lab3 (3, 23)
 33. ~ispitni_rok1 v ~lab1 (1, 24)
+33. ~ispitni_rok2 v ~lab4 (4, 23)
+34. ~ispitni_rok1 v ~lab1 (1, 24)
 34. ~ispitni_rok1 v ~lab2 (2, 24)
+35. ~ispitni_rok1 v ~lab2 (2, 24)
 35. ~ispitni_rok1 v ~lab3 (3, 24)
+36. ~ispitni_rok1 v ~lab3 (3, 24)
 36. ~ispitni_rok1 v ~lab4 (4, 24)
-37. ~mi_prolaz v ~zi_prolaz (12, 25)
-38. ~ispitni_rok2 (12, 29)
+37. ~ispitni_rok1 v ~lab4 (4, 24)
+38. ~mi_prolaz v ~zi_prolaz (12, 25)
+39. ~ispitni_rok2 (12, 29)
 39. ~lab1 (17, 33)
-40. ~lab2 (17, 34)
-41. ~lab3 (17, 35)
-42. ~lab4 (17, 36)
-43. NIL (12, 39)
+40. ~lab1 (17, 33)
+41. ~lab2 (17, 34)
+42. ~lab3 (17, 35)
+43. ~lab4 (17, 36)
+44. NIL (12, 39)
 ===============
 [CONCLUSION]: prolaz_predmeta is true
 
 - Passed test: resolution resolution_chicken_alfredo_nomilk.txt
 -> Complete obtained output:
-['chicken_alfredo']
-[(2, ['pasta'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['cream'], (None, None)), (8, ['parmesan'], (None, None)), (9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (10, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), (11, ['~chicken_alfredo'], (None, None))]
-(2, ['pasta'], (None, None))
-(3, ['olive_oil'], (None, None))
-(4, ['chicken'], (None, None))
-(5, ['butter'], (None, None))
-(6, ['flour'], (None, None))
-(7, ['cream'], (None, None))
-(8, ['parmesan'], (None, None))
-(9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None))
-(10, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None))
-(11, ['~chicken_alfredo'], (None, None))
-[(2, ['pasta'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['cream'], (None, None)), (8, ['parmesan'], (None, None)), (9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (10, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), (11, ['~chicken_alfredo'], (None, None))]
 FIRST CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None))
    LITERAL FOR PETLJA ~chicken_alfredo
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (11, ['~chicken_alfredo'], (None, None))
@@ -1043,7 +1015,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (11, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (10, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (11, ['~chicken_alfredo'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~chicken_alfredo'], (None, None)) - (10, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)) - ~chicken_alfredo
-            NOVA KLAUZULA JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
+            NOVA KLAUZULA JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
       SECOND CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (11, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11)), A FIRST CLAUSE JE (11, ['~chicken_alfredo'], (None, None))
 FIRST CLAUSE FOR PETLJA (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
@@ -1051,7 +1023,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauc
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11)) - (3, ['olive_oil'], (None, None)) - ~olive_oil
-            NOVA KLAUZULA JE (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
+            NOVA KLAUZULA JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (10, 11))
@@ -1069,7 +1041,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
    LITERAL FOR PETLJA ~pasta
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11)) - (2, ['pasta'], (None, None)) - ~pasta
-            NOVA KLAUZULA JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
+            NOVA KLAUZULA JE (14, ['~chicken', '~alfredo_sauce'], (2, 12))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (12, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 11))
@@ -1090,7 +1062,7 @@ FIRST CLAUSE FOR PETLJA (13, ['~chicken', '~alfredo_sauce'], (2, 12))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (13, ['~chicken', '~alfredo_sauce'], (2, 12)) - (4, ['chicken'], (None, None)) - ~chicken
-            NOVA KLAUZULA JE (14, ['~alfredo_sauce'], (4, 13))
+            NOVA KLAUZULA JE (15, ['~alfredo_sauce'], (4, 13))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
       SECOND CLAUSE FOR PETLJA (7, ['cream'], (None, None)), A FIRST CLAUSE JE (13, ['~chicken', '~alfredo_sauce'], (2, 12))
@@ -1114,7 +1086,7 @@ FIRST CLAUSE FOR PETLJA (14, ['~alfredo_sauce'], (4, 13))
       SECOND CLAUSE FOR PETLJA (8, ['parmesan'], (None, None)), A FIRST CLAUSE JE (14, ['~alfredo_sauce'], (4, 13))
       SECOND CLAUSE FOR PETLJA (9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (14, ['~alfredo_sauce'], (4, 13))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (14, ['~alfredo_sauce'], (4, 13)) - (9, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)) - ~alfredo_sauce
-            NOVA KLAUZULA JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
+            NOVA KLAUZULA JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (14, ['~alfredo_sauce'], (4, 13))
       SECOND CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (14, ['~alfredo_sauce'], (4, 13))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (14, ['~alfredo_sauce'], (4, 13))
@@ -1129,7 +1101,7 @@ FIRST CLAUSE FOR PETLJA (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14)) - (5, ['butter'], (None, None)) - ~butter
-            NOVA KLAUZULA JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
+            NOVA KLAUZULA JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
       SECOND CLAUSE FOR PETLJA (7, ['cream'], (None, None)), A FIRST CLAUSE JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
       SECOND CLAUSE FOR PETLJA (8, ['parmesan'], (None, None)), A FIRST CLAUSE JE (15, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (9, 14))
@@ -1154,7 +1126,7 @@ FIRST CLAUSE FOR PETLJA (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15)
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15)) - (6, ['flour'], (None, None)) - ~flour
-            NOVA KLAUZULA JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
+            NOVA KLAUZULA JE (18, ['~milk', '~cream', '~parmesan'], (6, 16))
       SECOND CLAUSE FOR PETLJA (7, ['cream'], (None, None)), A FIRST CLAUSE JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
       SECOND CLAUSE FOR PETLJA (8, ['parmesan'], (None, None)), A FIRST CLAUSE JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (16, ['~flour', '~milk', '~cream', '~parmesan'], (5, 15))
@@ -1197,7 +1169,7 @@ FIRST CLAUSE FOR PETLJA (17, ['~milk', '~cream', '~parmesan'], (6, 16))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
       SECOND CLAUSE FOR PETLJA (7, ['cream'], (None, None)), A FIRST CLAUSE JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (17, ['~milk', '~cream', '~parmesan'], (6, 16)) - (7, ['cream'], (None, None)) - ~cream
-            NOVA KLAUZULA JE (18, ['~milk', '~parmesan'], (7, 17))
+            NOVA KLAUZULA JE (19, ['~milk', '~parmesan'], (7, 17))
       SECOND CLAUSE FOR PETLJA (8, ['parmesan'], (None, None)), A FIRST CLAUSE JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~milk', '~cream', '~parmesan'], (6, 16))
@@ -1240,7 +1212,7 @@ FIRST CLAUSE FOR PETLJA (18, ['~milk', '~parmesan'], (7, 17))
       SECOND CLAUSE FOR PETLJA (7, ['cream'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~parmesan'], (7, 17))
       SECOND CLAUSE FOR PETLJA (8, ['parmesan'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~parmesan'], (7, 17))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~milk', '~parmesan'], (7, 17)) - (8, ['parmesan'], (None, None)) - ~parmesan
-            NOVA KLAUZULA JE (19, ['~milk'], (8, 18))
+            NOVA KLAUZULA JE (20, ['~milk'], (8, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['~milk', '~parmesan'], (7, 17))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['~milk', '~parmesan'], (7, 17))
       SECOND CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~parmesan'], (7, 17))
@@ -1292,20 +1264,6 @@ FIRST CLAUSE FOR PETLJA (11, ['~chicken_alfredo'], (None, None))
 
 - Passed test: resolution resolution_chicken_alfredo.txt
 -> Complete obtained output:
-['chicken_alfredo']
-[(2, ['pasta'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['milk'], (None, None)), (8, ['cream'], (None, None)), (9, ['parmesan'], (None, None)), (10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), (12, ['~chicken_alfredo'], (None, None))]
-(2, ['pasta'], (None, None))
-(3, ['olive_oil'], (None, None))
-(4, ['chicken'], (None, None))
-(5, ['butter'], (None, None))
-(6, ['flour'], (None, None))
-(7, ['milk'], (None, None))
-(8, ['cream'], (None, None))
-(9, ['parmesan'], (None, None))
-(10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None))
-(11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None))
-(12, ['~chicken_alfredo'], (None, None))
-[(2, ['pasta'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['milk'], (None, None)), (8, ['cream'], (None, None)), (9, ['parmesan'], (None, None)), (10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), (12, ['~chicken_alfredo'], (None, None))]
 FIRST CLAUSE FOR PETLJA (12, ['~chicken_alfredo'], (None, None))
    LITERAL FOR PETLJA ~chicken_alfredo
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (12, ['~chicken_alfredo'], (None, None))
@@ -1319,7 +1277,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (12, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (12, ['~chicken_alfredo'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~chicken_alfredo'], (None, None)) - (11, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce', 'chicken_alfredo'], (None, None)) - ~chicken_alfredo
-            NOVA KLAUZULA JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
+            NOVA KLAUZULA JE (13, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
       SECOND CLAUSE FOR PETLJA (12, ['~chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (12, ['~chicken_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12)), A FIRST CLAUSE JE (12, ['~chicken_alfredo'], (None, None))
 FIRST CLAUSE FOR PETLJA (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
@@ -1327,7 +1285,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauc
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12)) - (3, ['olive_oil'], (None, None)) - ~olive_oil
-            NOVA KLAUZULA JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
+            NOVA KLAUZULA JE (14, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (12, ['~olive_oil', '~pasta', '~chicken', '~alfredo_sauce'], (11, 12))
@@ -1346,7 +1304,7 @@ FIRST CLAUSE FOR PETLJA (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
    LITERAL FOR PETLJA ~pasta
       SECOND CLAUSE FOR PETLJA (2, ['pasta'], (None, None)), A FIRST CLAUSE JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12)) - (2, ['pasta'], (None, None)) - ~pasta
-            NOVA KLAUZULA JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
+            NOVA KLAUZULA JE (15, ['~chicken', '~alfredo_sauce'], (2, 13))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (13, ['~pasta', '~chicken', '~alfredo_sauce'], (3, 12))
@@ -1368,7 +1326,7 @@ FIRST CLAUSE FOR PETLJA (14, ['~chicken', '~alfredo_sauce'], (2, 13))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (14, ['~chicken', '~alfredo_sauce'], (2, 13)) - (4, ['chicken'], (None, None)) - ~chicken
-            NOVA KLAUZULA JE (15, ['~alfredo_sauce'], (4, 14))
+            NOVA KLAUZULA JE (16, ['~alfredo_sauce'], (4, 14))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken', '~alfredo_sauce'], (2, 13))
@@ -1394,7 +1352,7 @@ FIRST CLAUSE FOR PETLJA (15, ['~alfredo_sauce'], (4, 14))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (15, ['~alfredo_sauce'], (4, 14))
       SECOND CLAUSE FOR PETLJA (10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (15, ['~alfredo_sauce'], (4, 14))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (15, ['~alfredo_sauce'], (4, 14)) - (10, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)) - ~alfredo_sauce
-            NOVA KLAUZULA JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
+            NOVA KLAUZULA JE (17, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (15, ['~alfredo_sauce'], (4, 14))
       SECOND CLAUSE FOR PETLJA (12, ['~chicken_alfredo'], (None, None)), A FIRST CLAUSE JE (15, ['~alfredo_sauce'], (4, 14))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (15, ['~alfredo_sauce'], (4, 14))
@@ -1409,7 +1367,7 @@ FIRST CLAUSE FOR PETLJA (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15)) - (5, ['butter'], (None, None)) - ~butter
-            NOVA KLAUZULA JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
+            NOVA KLAUZULA JE (18, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (16, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (10, 15))
@@ -1435,7 +1393,7 @@ FIRST CLAUSE FOR PETLJA (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16)
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16)) - (6, ['flour'], (None, None)) - ~flour
-            NOVA KLAUZULA JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
+            NOVA KLAUZULA JE (19, ['~milk', '~cream', '~parmesan'], (6, 17))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (17, ['~flour', '~milk', '~cream', '~parmesan'], (5, 16))
@@ -1461,7 +1419,7 @@ FIRST CLAUSE FOR PETLJA (18, ['~milk', '~cream', '~parmesan'], (6, 17))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~milk', '~cream', '~parmesan'], (6, 17)) - (7, ['milk'], (None, None)) - ~milk
-            NOVA KLAUZULA JE (19, ['~cream', '~parmesan'], (7, 18))
+            NOVA KLAUZULA JE (20, ['~cream', '~parmesan'], (7, 18))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (18, ['~milk', '~cream', '~parmesan'], (6, 17))
@@ -1487,7 +1445,7 @@ FIRST CLAUSE FOR PETLJA (19, ['~cream', '~parmesan'], (7, 18))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (19, ['~cream', '~parmesan'], (7, 18))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (19, ['~cream', '~parmesan'], (7, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['~cream', '~parmesan'], (7, 18)) - (8, ['cream'], (None, None)) - ~cream
-            NOVA KLAUZULA JE (20, ['~parmesan'], (8, 19))
+            NOVA KLAUZULA JE (21, ['~parmesan'], (8, 19))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (19, ['~cream', '~parmesan'], (7, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~cream', '~parmesan'], (7, 18))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (19, ['~cream', '~parmesan'], (7, 18))
@@ -1513,7 +1471,7 @@ FIRST CLAUSE FOR PETLJA (20, ['~parmesan'], (8, 19))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (20, ['~parmesan'], (8, 19))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (20, ['~parmesan'], (8, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['~parmesan'], (8, 19)) - (9, ['parmesan'], (None, None)) - ~parmesan
-            NOVA KLAUZULA JE (21, [], (9, 20))
+            NOVA KLAUZULA JE (22, [], (9, 20))
 2. pasta
 3. olive_oil
 4. chicken
@@ -1527,37 +1485,29 @@ FIRST CLAUSE FOR PETLJA (20, ['~parmesan'], (8, 19))
 12. ~chicken_alfredo
 ===============
 12. ~olive_oil v ~pasta v ~chicken v ~alfredo_sauce (11, 12)
+13. ~olive_oil v ~pasta v ~chicken v ~alfredo_sauce (11, 12)
 13. ~pasta v ~chicken v ~alfredo_sauce (3, 12)
 14. ~chicken v ~alfredo_sauce (2, 13)
+14. ~pasta v ~chicken v ~alfredo_sauce (3, 12)
 15. ~alfredo_sauce (4, 14)
+15. ~chicken v ~alfredo_sauce (2, 13)
+16. ~alfredo_sauce (4, 14)
 16. ~butter v ~flour v ~milk v ~cream v ~parmesan (10, 15)
+17. ~butter v ~flour v ~milk v ~cream v ~parmesan (10, 15)
 17. ~flour v ~milk v ~cream v ~parmesan (5, 16)
+18. ~flour v ~milk v ~cream v ~parmesan (5, 16)
 18. ~milk v ~cream v ~parmesan (6, 17)
 19. ~cream v ~parmesan (7, 18)
+19. ~milk v ~cream v ~parmesan (6, 17)
+20. ~cream v ~parmesan (7, 18)
 20. ~parmesan (8, 19)
-21. NIL (9, 20)
+21. ~parmesan (8, 19)
+22. NIL (9, 20)
 ===============
 [CONCLUSION]: chicken_alfredo is true
 
 - Passed test: resolution resolution_chicken_broccoli_alfredo_big.txt
 -> Complete obtained output:
-['chicken_broccoli_alfredo']
-[(1, ['pasta'], (None, None)), (2, ['broccoli'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['milk'], (None, None)), (8, ['cream'], (None, None)), (9, ['parmesan'], (None, None)), (10, ['parsley'], (None, None)), (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)), (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (13, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli', 'chicken_broccoli_alfredo'], (None, None)), (14, ['~chicken_broccoli_alfredo'], (None, None))]
-(1, ['pasta'], (None, None))
-(2, ['broccoli'], (None, None))
-(3, ['olive_oil'], (None, None))
-(4, ['chicken'], (None, None))
-(5, ['butter'], (None, None))
-(6, ['flour'], (None, None))
-(7, ['milk'], (None, None))
-(8, ['cream'], (None, None))
-(9, ['parmesan'], (None, None))
-(10, ['parsley'], (None, None))
-(11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None))
-(12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None))
-(13, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli', 'chicken_broccoli_alfredo'], (None, None))
-(14, ['~chicken_broccoli_alfredo'], (None, None))
-[(1, ['pasta'], (None, None)), (2, ['broccoli'], (None, None)), (3, ['olive_oil'], (None, None)), (4, ['chicken'], (None, None)), (5, ['butter'], (None, None)), (6, ['flour'], (None, None)), (7, ['milk'], (None, None)), (8, ['cream'], (None, None)), (9, ['parmesan'], (None, None)), (10, ['parsley'], (None, None)), (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)), (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), (13, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli', 'chicken_broccoli_alfredo'], (None, None)), (14, ['~chicken_broccoli_alfredo'], (None, None))]
 FIRST CLAUSE FOR PETLJA (14, ['~chicken_broccoli_alfredo'], (None, None))
    LITERAL FOR PETLJA ~chicken_broccoli_alfredo
       SECOND CLAUSE FOR PETLJA (1, ['pasta'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken_broccoli_alfredo'], (None, None))
@@ -1574,14 +1524,14 @@ FIRST CLAUSE FOR PETLJA (14, ['~chicken_broccoli_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken_broccoli_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (13, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli', 'chicken_broccoli_alfredo'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken_broccoli_alfredo'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (14, ['~chicken_broccoli_alfredo'], (None, None)) - (13, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli', 'chicken_broccoli_alfredo'], (None, None)) - ~chicken_broccoli_alfredo
-            NOVA KLAUZULA JE (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
+            NOVA KLAUZULA JE (16, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
       SECOND CLAUSE FOR PETLJA (14, ['~chicken_broccoli_alfredo'], (None, None)), A FIRST CLAUSE JE (14, ['~chicken_broccoli_alfredo'], (None, None))
       SECOND CLAUSE FOR PETLJA (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14)), A FIRST CLAUSE JE (14, ['~chicken_broccoli_alfredo'], (None, None))
 FIRST CLAUSE FOR PETLJA (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
    LITERAL FOR PETLJA ~pasta
       SECOND CLAUSE FOR PETLJA (1, ['pasta'], (None, None)), A FIRST CLAUSE JE (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14)) - (1, ['pasta'], (None, None)) - ~pasta
-            NOVA KLAUZULA JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
+            NOVA KLAUZULA JE (17, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
       SECOND CLAUSE FOR PETLJA (2, ['broccoli'], (None, None)), A FIRST CLAUSE JE (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (15, ['~pasta', '~diced_chicken', '~alfredo_sauce', '~broccoli'], (13, 14))
@@ -1614,7 +1564,7 @@ FIRST CLAUSE FOR PETLJA (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], 
       SECOND CLAUSE FOR PETLJA (10, ['parsley'], (None, None)), A FIRST CLAUSE JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
       SECOND CLAUSE FOR PETLJA (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)), A FIRST CLAUSE JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15)) - (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)) - ~diced_chicken
-            NOVA KLAUZULA JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
+            NOVA KLAUZULA JE (18, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
       SECOND CLAUSE FOR PETLJA (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
       SECOND CLAUSE FOR PETLJA (14, ['~chicken_broccoli_alfredo'], (None, None)), A FIRST CLAUSE JE (16, ['~diced_chicken', '~alfredo_sauce', '~broccoli'], (1, 15))
@@ -1638,7 +1588,7 @@ FIRST CLAUSE FOR PETLJA (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chi
       SECOND CLAUSE FOR PETLJA (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)), A FIRST CLAUSE JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
       SECOND CLAUSE FOR PETLJA (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)), A FIRST CLAUSE JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16)) - (12, ['~butter', '~flour', '~milk', '~cream', '~parmesan', 'alfredo_sauce'], (None, None)) - ~alfredo_sauce
-            NOVA KLAUZULA JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
+            NOVA KLAUZULA JE (19, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
       SECOND CLAUSE FOR PETLJA (14, ['~chicken_broccoli_alfredo'], (None, None)), A FIRST CLAUSE JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (17, ['~alfredo_sauce', '~broccoli', '~olive_oil', '~chicken'], (11, 16))
@@ -1653,7 +1603,7 @@ FIRST CLAUSE FOR PETLJA (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', 
       SECOND CLAUSE FOR PETLJA (1, ['pasta'], (None, None)), A FIRST CLAUSE JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
       SECOND CLAUSE FOR PETLJA (2, ['broccoli'], (None, None)), A FIRST CLAUSE JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17)) - (2, ['broccoli'], (None, None)) - ~broccoli
-            NOVA KLAUZULA JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
+            NOVA KLAUZULA JE (20, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (18, ['~broccoli', '~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (12, 17))
@@ -1684,7 +1634,7 @@ FIRST CLAUSE FOR PETLJA (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~m
       SECOND CLAUSE FOR PETLJA (2, ['broccoli'], (None, None)), A FIRST CLAUSE JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18)) - (3, ['olive_oil'], (None, None)) - ~olive_oil
-            NOVA KLAUZULA JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
+            NOVA KLAUZULA JE (21, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (19, ['~olive_oil', '~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (2, 18))
@@ -1715,7 +1665,7 @@ FIRST CLAUSE FOR PETLJA (20, ['~chicken', '~butter', '~flour', '~milk', '~cream'
       SECOND CLAUSE FOR PETLJA (3, ['olive_oil'], (None, None)), A FIRST CLAUSE JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19)) - (4, ['chicken'], (None, None)) - ~chicken
-            NOVA KLAUZULA JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
+            NOVA KLAUZULA JE (22, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (20, ['~chicken', '~butter', '~flour', '~milk', '~cream', '~parmesan'], (3, 19))
@@ -1746,7 +1696,7 @@ FIRST CLAUSE FOR PETLJA (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan
       SECOND CLAUSE FOR PETLJA (4, ['chicken'], (None, None)), A FIRST CLAUSE JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20)) - (5, ['butter'], (None, None)) - ~butter
-            NOVA KLAUZULA JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
+            NOVA KLAUZULA JE (23, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (21, ['~butter', '~flour', '~milk', '~cream', '~parmesan'], (4, 20))
@@ -1777,7 +1727,7 @@ FIRST CLAUSE FOR PETLJA (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21)
       SECOND CLAUSE FOR PETLJA (5, ['butter'], (None, None)), A FIRST CLAUSE JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21)) - (6, ['flour'], (None, None)) - ~flour
-            NOVA KLAUZULA JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
+            NOVA KLAUZULA JE (24, ['~milk', '~cream', '~parmesan'], (6, 22))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (22, ['~flour', '~milk', '~cream', '~parmesan'], (5, 21))
@@ -1808,7 +1758,7 @@ FIRST CLAUSE FOR PETLJA (23, ['~milk', '~cream', '~parmesan'], (6, 22))
       SECOND CLAUSE FOR PETLJA (6, ['flour'], (None, None)), A FIRST CLAUSE JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (23, ['~milk', '~cream', '~parmesan'], (6, 22)) - (7, ['milk'], (None, None)) - ~milk
-            NOVA KLAUZULA JE (24, ['~cream', '~parmesan'], (7, 23))
+            NOVA KLAUZULA JE (25, ['~cream', '~parmesan'], (7, 23))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
       SECOND CLAUSE FOR PETLJA (10, ['parsley'], (None, None)), A FIRST CLAUSE JE (23, ['~milk', '~cream', '~parmesan'], (6, 22))
@@ -1839,7 +1789,7 @@ FIRST CLAUSE FOR PETLJA (24, ['~cream', '~parmesan'], (7, 23))
       SECOND CLAUSE FOR PETLJA (7, ['milk'], (None, None)), A FIRST CLAUSE JE (24, ['~cream', '~parmesan'], (7, 23))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (24, ['~cream', '~parmesan'], (7, 23))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (24, ['~cream', '~parmesan'], (7, 23)) - (8, ['cream'], (None, None)) - ~cream
-            NOVA KLAUZULA JE (25, ['~parmesan'], (8, 24))
+            NOVA KLAUZULA JE (26, ['~parmesan'], (8, 24))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (24, ['~cream', '~parmesan'], (7, 23))
       SECOND CLAUSE FOR PETLJA (10, ['parsley'], (None, None)), A FIRST CLAUSE JE (24, ['~cream', '~parmesan'], (7, 23))
       SECOND CLAUSE FOR PETLJA (11, ['~olive_oil', '~chicken', 'diced_chicken'], (None, None)), A FIRST CLAUSE JE (24, ['~cream', '~parmesan'], (7, 23))
@@ -1870,7 +1820,7 @@ FIRST CLAUSE FOR PETLJA (25, ['~parmesan'], (8, 24))
       SECOND CLAUSE FOR PETLJA (8, ['cream'], (None, None)), A FIRST CLAUSE JE (25, ['~parmesan'], (8, 24))
       SECOND CLAUSE FOR PETLJA (9, ['parmesan'], (None, None)), A FIRST CLAUSE JE (25, ['~parmesan'], (8, 24))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (25, ['~parmesan'], (8, 24)) - (9, ['parmesan'], (None, None)) - ~parmesan
-            NOVA KLAUZULA JE (26, [], (9, 25))
+            NOVA KLAUZULA JE (27, [], (9, 25))
 1. pasta
 2. broccoli
 3. olive_oil
@@ -1887,30 +1837,32 @@ FIRST CLAUSE FOR PETLJA (25, ['~parmesan'], (8, 24))
 ===============
 15. ~pasta v ~diced_chicken v ~alfredo_sauce v ~broccoli (13, 14)
 16. ~diced_chicken v ~alfredo_sauce v ~broccoli (1, 15)
+16. ~pasta v ~diced_chicken v ~alfredo_sauce v ~broccoli (13, 14)
 17. ~alfredo_sauce v ~broccoli v ~olive_oil v ~chicken (11, 16)
+17. ~diced_chicken v ~alfredo_sauce v ~broccoli (1, 15)
+18. ~alfredo_sauce v ~broccoli v ~olive_oil v ~chicken (11, 16)
 18. ~broccoli v ~olive_oil v ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (12, 17)
+19. ~broccoli v ~olive_oil v ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (12, 17)
 19. ~olive_oil v ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (2, 18)
 20. ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (3, 19)
+20. ~olive_oil v ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (2, 18)
 21. ~butter v ~flour v ~milk v ~cream v ~parmesan (4, 20)
+21. ~chicken v ~butter v ~flour v ~milk v ~cream v ~parmesan (3, 19)
+22. ~butter v ~flour v ~milk v ~cream v ~parmesan (4, 20)
 22. ~flour v ~milk v ~cream v ~parmesan (5, 21)
+23. ~flour v ~milk v ~cream v ~parmesan (5, 21)
 23. ~milk v ~cream v ~parmesan (6, 22)
 24. ~cream v ~parmesan (7, 23)
+24. ~milk v ~cream v ~parmesan (6, 22)
+25. ~cream v ~parmesan (7, 23)
 25. ~parmesan (8, 24)
-26. NIL (9, 25)
+26. ~parmesan (8, 24)
+27. NIL (9, 25)
 ===============
 [CONCLUSION]: chicken_broccoli_alfredo is true
 
 - Passed test: resolution resolution_coffee.txt
 -> Complete obtained output:
-['coffee']
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['coffee_powder'], (None, None)), (4, ['~water', '~heater', 'hot_water'], (None, None)), (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (6, ['~coffee'], (None, None))]
-(1, ['water'], (None, None))
-(2, ['heater'], (None, None))
-(3, ['coffee_powder'], (None, None))
-(4, ['~water', '~heater', 'hot_water'], (None, None))
-(5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None))
-(6, ['~coffee'], (None, None))
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['coffee_powder'], (None, None)), (4, ['~water', '~heater', 'hot_water'], (None, None)), (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (6, ['~coffee'], (None, None))]
 FIRST CLAUSE FOR PETLJA (6, ['~coffee'], (None, None))
    LITERAL FOR PETLJA ~coffee
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee'], (None, None))
@@ -1919,7 +1871,7 @@ FIRST CLAUSE FOR PETLJA (6, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~coffee'], (None, None)) - (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)) - ~coffee
-            NOVA KLAUZULA JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
+            NOVA KLAUZULA JE (8, ['~coffee_powder', '~hot_water'], (5, 6))
       SECOND CLAUSE FOR PETLJA (6, ['~coffee'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (7, ['~coffee_powder', '~hot_water'], (5, 6)), A FIRST CLAUSE JE (6, ['~coffee'], (None, None))
 FIRST CLAUSE FOR PETLJA (7, ['~coffee_powder', '~hot_water'], (5, 6))
@@ -1928,7 +1880,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~coffee_powder', '~hot_water'], (5, 6))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
       SECOND CLAUSE FOR PETLJA (3, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~coffee_powder', '~hot_water'], (5, 6)) - (3, ['coffee_powder'], (None, None)) - ~coffee_powder
-            NOVA KLAUZULA JE (8, ['~hot_water'], (3, 7))
+            NOVA KLAUZULA JE (9, ['~hot_water'], (3, 7))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
       SECOND CLAUSE FOR PETLJA (6, ['~coffee'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee_powder', '~hot_water'], (5, 6))
@@ -1942,7 +1894,7 @@ FIRST CLAUSE FOR PETLJA (8, ['~hot_water'], (3, 7))
       SECOND CLAUSE FOR PETLJA (3, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (8, ['~hot_water'], (3, 7))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (8, ['~hot_water'], (3, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~hot_water'], (3, 7)) - (4, ['~water', '~heater', 'hot_water'], (None, None)) - ~hot_water
-            NOVA KLAUZULA JE (9, ['~water', '~heater'], (4, 8))
+            NOVA KLAUZULA JE (10, ['~water', '~heater'], (4, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~hot_water'], (3, 7))
       SECOND CLAUSE FOR PETLJA (6, ['~coffee'], (None, None)), A FIRST CLAUSE JE (8, ['~hot_water'], (3, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~hot_water'], (3, 7))
@@ -1952,7 +1904,7 @@ FIRST CLAUSE FOR PETLJA (9, ['~water', '~heater'], (4, 8))
    LITERAL FOR PETLJA ~water
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (9, ['~water', '~heater'], (4, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~water', '~heater'], (4, 8)) - (1, ['water'], (None, None)) - ~water
-            NOVA KLAUZULA JE (10, ['~heater'], (1, 9))
+            NOVA KLAUZULA JE (11, ['~heater'], (1, 9))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (9, ['~water', '~heater'], (4, 8))
       SECOND CLAUSE FOR PETLJA (3, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (9, ['~water', '~heater'], (4, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~water', '~heater'], (4, 8))
@@ -1968,7 +1920,7 @@ FIRST CLAUSE FOR PETLJA (10, ['~heater'], (1, 9))
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (10, ['~heater'], (1, 9))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (10, ['~heater'], (1, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['~heater'], (1, 9)) - (2, ['heater'], (None, None)) - ~heater
-            NOVA KLAUZULA JE (11, [], (2, 10))
+            NOVA KLAUZULA JE (12, [], (2, 10))
 1. water
 2. heater
 3. coffee_powder
@@ -1977,23 +1929,19 @@ FIRST CLAUSE FOR PETLJA (10, ['~heater'], (1, 9))
 6. ~coffee
 ===============
 7. ~coffee_powder v ~hot_water (5, 6)
+8. ~coffee_powder v ~hot_water (5, 6)
 8. ~hot_water (3, 7)
+9. ~hot_water (3, 7)
 9. ~water v ~heater (4, 8)
 10. ~heater (1, 9)
-11. NIL (2, 10)
+10. ~water v ~heater (4, 8)
+11. ~heater (1, 9)
+12. NIL (2, 10)
 ===============
 [CONCLUSION]: coffee is true
 
 - Passed test: resolution resolution_coffee_noheater.txt
 -> Complete obtained output:
-['coffee']
-[(1, ['water'], (None, None)), (2, ['coffee_powder'], (None, None)), (3, ['~water', '~heater', 'hot_water'], (None, None)), (4, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (5, ['~coffee'], (None, None))]
-(1, ['water'], (None, None))
-(2, ['coffee_powder'], (None, None))
-(3, ['~water', '~heater', 'hot_water'], (None, None))
-(4, ['~coffee_powder', '~hot_water', 'coffee'], (None, None))
-(5, ['~coffee'], (None, None))
-[(1, ['water'], (None, None)), (2, ['coffee_powder'], (None, None)), (3, ['~water', '~heater', 'hot_water'], (None, None)), (4, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (5, ['~coffee'], (None, None))]
 FIRST CLAUSE FOR PETLJA (5, ['~coffee'], (None, None))
    LITERAL FOR PETLJA ~coffee
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (5, ['~coffee'], (None, None))
@@ -2001,7 +1949,7 @@ FIRST CLAUSE FOR PETLJA (5, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (5, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), A FIRST CLAUSE JE (5, ['~coffee'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~coffee'], (None, None)) - (4, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)) - ~coffee
-            NOVA KLAUZULA JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
+            NOVA KLAUZULA JE (7, ['~coffee_powder', '~hot_water'], (4, 5))
       SECOND CLAUSE FOR PETLJA (5, ['~coffee'], (None, None)), A FIRST CLAUSE JE (5, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['~coffee_powder', '~hot_water'], (4, 5)), A FIRST CLAUSE JE (5, ['~coffee'], (None, None))
 FIRST CLAUSE FOR PETLJA (6, ['~coffee_powder', '~hot_water'], (4, 5))
@@ -2009,7 +1957,7 @@ FIRST CLAUSE FOR PETLJA (6, ['~coffee_powder', '~hot_water'], (4, 5))
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
       SECOND CLAUSE FOR PETLJA (2, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~coffee_powder', '~hot_water'], (4, 5)) - (2, ['coffee_powder'], (None, None)) - ~coffee_powder
-            NOVA KLAUZULA JE (7, ['~hot_water'], (2, 6))
+            NOVA KLAUZULA JE (8, ['~hot_water'], (2, 6))
       SECOND CLAUSE FOR PETLJA (3, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
       SECOND CLAUSE FOR PETLJA (5, ['~coffee'], (None, None)), A FIRST CLAUSE JE (6, ['~coffee_powder', '~hot_water'], (4, 5))
@@ -2022,7 +1970,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~hot_water'], (2, 6))
       SECOND CLAUSE FOR PETLJA (2, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (7, ['~hot_water'], (2, 6))
       SECOND CLAUSE FOR PETLJA (3, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (7, ['~hot_water'], (2, 6))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~hot_water'], (2, 6)) - (3, ['~water', '~heater', 'hot_water'], (None, None)) - ~hot_water
-            NOVA KLAUZULA JE (8, ['~water', '~heater'], (3, 7))
+            NOVA KLAUZULA JE (9, ['~water', '~heater'], (3, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (7, ['~hot_water'], (2, 6))
       SECOND CLAUSE FOR PETLJA (5, ['~coffee'], (None, None)), A FIRST CLAUSE JE (7, ['~hot_water'], (2, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (7, ['~hot_water'], (2, 6))
@@ -2032,7 +1980,7 @@ FIRST CLAUSE FOR PETLJA (8, ['~water', '~heater'], (3, 7))
    LITERAL FOR PETLJA ~water
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (8, ['~water', '~heater'], (3, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~water', '~heater'], (3, 7)) - (1, ['water'], (None, None)) - ~water
-            NOVA KLAUZULA JE (9, ['~heater'], (1, 8))
+            NOVA KLAUZULA JE (10, ['~heater'], (1, 8))
       SECOND CLAUSE FOR PETLJA (2, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (8, ['~water', '~heater'], (3, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~water', '~heater'], (3, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~water', '~heater'], (3, 7))
@@ -2066,19 +2014,6 @@ FIRST CLAUSE FOR PETLJA (5, ['~coffee'], (None, None))
 
 - Passed test: resolution resolution_coffee_or_tea.txt
 -> Complete obtained output:
-['coffee', 'tea']
-['~tea']
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['tea_bag'], (None, None)), (4, ['coffee_powder'], (None, None)), (5, ['~water', '~heater', 'hot_water'], (None, None)), (6, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (7, ['~hot_water', 'tea_bag', 'tea'], (None, None)), (8, ['~coffee'], (None, None)), (9, ['~tea'], (None, None))]
-(1, ['water'], (None, None))
-(2, ['heater'], (None, None))
-(3, ['tea_bag'], (None, None))
-(4, ['coffee_powder'], (None, None))
-(5, ['~water', '~heater', 'hot_water'], (None, None))
-(6, ['~coffee_powder', '~hot_water', 'coffee'], (None, None))
-(7, ['~hot_water', 'tea_bag', 'tea'], (None, None))
-(8, ['~coffee'], (None, None))
-(9, ['~tea'], (None, None))
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['tea_bag'], (None, None)), (4, ['coffee_powder'], (None, None)), (5, ['~water', '~heater', 'hot_water'], (None, None)), (6, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), None, (8, ['~coffee'], (None, None)), (9, ['~tea'], (None, None))]
 FIRST CLAUSE FOR PETLJA (8, ['~coffee'], (None, None))
    LITERAL FOR PETLJA ~coffee
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
@@ -2088,7 +2023,7 @@ FIRST CLAUSE FOR PETLJA (8, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~coffee'], (None, None)) - (6, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)) - ~coffee
-            NOVA KLAUZULA JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
+            NOVA KLAUZULA JE (11, ['~coffee_powder', '~hot_water'], (6, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (8, ['~coffee'], (None, None)), A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~tea'], (None, None)), A FIRST CLAUSE JE (8, ['~coffee'], (None, None))
@@ -2112,7 +2047,7 @@ FIRST CLAUSE FOR PETLJA (10, ['~coffee_powder', '~hot_water'], (6, 8))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
       SECOND CLAUSE FOR PETLJA (4, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['~coffee_powder', '~hot_water'], (6, 8)) - (4, ['coffee_powder'], (None, None)) - ~coffee_powder
-            NOVA KLAUZULA JE (11, ['~hot_water'], (4, 10))
+            NOVA KLAUZULA JE (12, ['~hot_water'], (4, 10))
       SECOND CLAUSE FOR PETLJA (5, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~coffee_powder', '~hot_water'], (6, 8))
@@ -2129,7 +2064,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~hot_water'], (4, 10))
       SECOND CLAUSE FOR PETLJA (4, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (11, ['~hot_water'], (4, 10))
       SECOND CLAUSE FOR PETLJA (5, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (11, ['~hot_water'], (4, 10))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~hot_water'], (4, 10)) - (5, ['~water', '~heater', 'hot_water'], (None, None)) - ~hot_water
-            NOVA KLAUZULA JE (12, ['~water', '~heater'], (5, 11))
+            NOVA KLAUZULA JE (13, ['~water', '~heater'], (5, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~hot_water'], (4, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~hot_water'], (4, 10))
       SECOND CLAUSE FOR PETLJA (8, ['~coffee'], (None, None)), A FIRST CLAUSE JE (11, ['~hot_water'], (4, 10))
@@ -2141,7 +2076,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~water', '~heater'], (5, 11))
    LITERAL FOR PETLJA ~water
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (12, ['~water', '~heater'], (5, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~water', '~heater'], (5, 11)) - (1, ['water'], (None, None)) - ~water
-            NOVA KLAUZULA JE (13, ['~heater'], (1, 12))
+            NOVA KLAUZULA JE (14, ['~heater'], (1, 12))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (12, ['~water', '~heater'], (5, 11))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (12, ['~water', '~heater'], (5, 11))
       SECOND CLAUSE FOR PETLJA (4, ['coffee_powder'], (None, None)), A FIRST CLAUSE JE (12, ['~water', '~heater'], (5, 11))
@@ -2160,7 +2095,7 @@ FIRST CLAUSE FOR PETLJA (13, ['~heater'], (1, 12))
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (13, ['~heater'], (1, 12))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (13, ['~heater'], (1, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (13, ['~heater'], (1, 12)) - (2, ['heater'], (None, None)) - ~heater
-            NOVA KLAUZULA JE (14, [], (2, 13))
+            NOVA KLAUZULA JE (15, [], (2, 13))
 1. water
 2. heater
 4. coffee_powder
@@ -2169,27 +2104,19 @@ FIRST CLAUSE FOR PETLJA (13, ['~heater'], (1, 12))
 8. ~coffee
 ===============
 10. ~coffee_powder v ~hot_water (6, 8)
+11. ~coffee_powder v ~hot_water (6, 8)
 11. ~hot_water (4, 10)
+12. ~hot_water (4, 10)
 12. ~water v ~heater (5, 11)
 13. ~heater (1, 12)
-14. NIL (2, 13)
+13. ~water v ~heater (5, 11)
+14. ~heater (1, 12)
+15. NIL (2, 13)
 ===============
 [CONCLUSION]: coffee v tea is true
 
 - Passed test: resolution resolution_coffee_or_tea_nopowder.txt
 -> Complete obtained output:
-['coffee', 'tea']
-['~tea']
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['tea_bag'], (None, None)), (4, ['~water', '~heater', 'hot_water'], (None, None)), (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (6, ['~hot_water', '~tea_bag', 'tea'], (None, None)), (7, ['~coffee'], (None, None)), (8, ['~tea'], (None, None))]
-(1, ['water'], (None, None))
-(2, ['heater'], (None, None))
-(3, ['tea_bag'], (None, None))
-(4, ['~water', '~heater', 'hot_water'], (None, None))
-(5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None))
-(6, ['~hot_water', '~tea_bag', 'tea'], (None, None))
-(7, ['~coffee'], (None, None))
-(8, ['~tea'], (None, None))
-[(1, ['water'], (None, None)), (2, ['heater'], (None, None)), (3, ['tea_bag'], (None, None)), (4, ['~water', '~heater', 'hot_water'], (None, None)), (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), (6, ['~hot_water', '~tea_bag', 'tea'], (None, None)), (7, ['~coffee'], (None, None)), (8, ['~tea'], (None, None))]
 FIRST CLAUSE FOR PETLJA (7, ['~coffee'], (None, None))
    LITERAL FOR PETLJA ~coffee
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
@@ -2198,7 +2125,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~coffee'], (None, None)) - (5, ['~coffee_powder', '~hot_water', 'coffee'], (None, None)) - ~coffee
-            NOVA KLAUZULA JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
+            NOVA KLAUZULA JE (10, ['~coffee_powder', '~hot_water'], (5, 7))
       SECOND CLAUSE FOR PETLJA (6, ['~hot_water', '~tea_bag', 'tea'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (7, ['~coffee'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
       SECOND CLAUSE FOR PETLJA (8, ['~tea'], (None, None)), A FIRST CLAUSE JE (7, ['~coffee'], (None, None))
@@ -2212,7 +2139,7 @@ FIRST CLAUSE FOR PETLJA (8, ['~tea'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~tea'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['~hot_water', '~tea_bag', 'tea'], (None, None)), A FIRST CLAUSE JE (8, ['~tea'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~tea'], (None, None)) - (6, ['~hot_water', '~tea_bag', 'tea'], (None, None)) - ~tea
-            NOVA KLAUZULA JE (10, ['~hot_water', '~tea_bag'], (6, 8))
+            NOVA KLAUZULA JE (11, ['~hot_water', '~tea_bag'], (6, 8))
       SECOND CLAUSE FOR PETLJA (7, ['~coffee'], (None, None)), A FIRST CLAUSE JE (8, ['~tea'], (None, None))
       SECOND CLAUSE FOR PETLJA (8, ['~tea'], (None, None)), A FIRST CLAUSE JE (8, ['~tea'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~coffee_powder', '~hot_water'], (5, 7)), A FIRST CLAUSE JE (8, ['~tea'], (None, None))
@@ -2235,7 +2162,7 @@ FIRST CLAUSE FOR PETLJA (9, ['~coffee_powder', '~hot_water'], (5, 7))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~coffee_powder', '~hot_water'], (5, 7)) - (4, ['~water', '~heater', 'hot_water'], (None, None)) - ~hot_water
-            NOVA KLAUZULA JE (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
+            NOVA KLAUZULA JE (12, ['~coffee_powder', '~water', '~heater'], (4, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
       SECOND CLAUSE FOR PETLJA (7, ['~coffee'], (None, None)), A FIRST CLAUSE JE (9, ['~coffee_powder', '~hot_water'], (5, 7))
@@ -2250,7 +2177,7 @@ FIRST CLAUSE FOR PETLJA (10, ['~hot_water', '~tea_bag'], (6, 8))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (10, ['~hot_water', '~tea_bag'], (6, 8))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (10, ['~hot_water', '~tea_bag'], (6, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['~hot_water', '~tea_bag'], (6, 8)) - (4, ['~water', '~heater', 'hot_water'], (None, None)) - ~hot_water
-            NOVA KLAUZULA JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
+            NOVA KLAUZULA JE (13, ['~tea_bag', '~water', '~heater'], (4, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~hot_water', '~tea_bag'], (6, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~hot_water', '~tea_bag'], (6, 8))
       SECOND CLAUSE FOR PETLJA (7, ['~coffee'], (None, None)), A FIRST CLAUSE JE (10, ['~hot_water', '~tea_bag'], (6, 8))
@@ -2277,7 +2204,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
    LITERAL FOR PETLJA ~water
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~coffee_powder', '~water', '~heater'], (4, 9)) - (1, ['water'], (None, None)) - ~water
-            NOVA KLAUZULA JE (13, ['~coffee_powder', '~heater'], (1, 11))
+            NOVA KLAUZULA JE (14, ['~coffee_powder', '~heater'], (1, 11))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
       SECOND CLAUSE FOR PETLJA (4, ['~water', '~heater', 'hot_water'], (None, None)), A FIRST CLAUSE JE (11, ['~coffee_powder', '~water', '~heater'], (4, 9))
@@ -2297,7 +2224,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~tea_bag', '~water', '~heater'], (4, 10))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~tea_bag', '~water', '~heater'], (4, 10)) - (3, ['tea_bag'], (None, None)) - ~tea_bag
-            NOVA KLAUZULA JE (14, ['~water', '~heater'], (3, 12))
+            NOVA KLAUZULA JE (15, ['~water', '~heater'], (3, 12))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~tea_bag', '~water', '~heater'], (4, 10))
@@ -2331,7 +2258,7 @@ FIRST CLAUSE FOR PETLJA (13, ['~coffee_powder', '~heater'], (1, 11))
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (13, ['~coffee_powder', '~heater'], (1, 11))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (13, ['~coffee_powder', '~heater'], (1, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (13, ['~coffee_powder', '~heater'], (1, 11)) - (2, ['heater'], (None, None)) - ~heater
-            NOVA KLAUZULA JE (15, ['~coffee_powder'], (2, 13))
+            NOVA KLAUZULA JE (16, ['~coffee_powder'], (2, 13))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (13, ['~coffee_powder', '~heater'], (1, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (13, ['~coffee_powder', '~heater'], (1, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (13, ['~coffee_powder', '~heater'], (1, 11))
@@ -2349,7 +2276,7 @@ FIRST CLAUSE FOR PETLJA (14, ['~water', '~heater'], (3, 12))
    LITERAL FOR PETLJA ~water
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (14, ['~water', '~heater'], (3, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (14, ['~water', '~heater'], (3, 12)) - (1, ['water'], (None, None)) - ~water
-            NOVA KLAUZULA JE (16, ['~heater'], (1, 14))
+            NOVA KLAUZULA JE (17, ['~heater'], (1, 14))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (14, ['~water', '~heater'], (3, 12))
       SECOND CLAUSE FOR PETLJA (3, ['tea_bag'], (None, None)), A FIRST CLAUSE JE (14, ['~water', '~heater'], (3, 12))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (14, ['~water', '~heater'], (3, 12))
@@ -2389,7 +2316,7 @@ FIRST CLAUSE FOR PETLJA (16, ['~heater'], (1, 14))
       SECOND CLAUSE FOR PETLJA (1, ['water'], (None, None)), A FIRST CLAUSE JE (16, ['~heater'], (1, 14))
       SECOND CLAUSE FOR PETLJA (2, ['heater'], (None, None)), A FIRST CLAUSE JE (16, ['~heater'], (1, 14))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~heater'], (1, 14)) - (2, ['heater'], (None, None)) - ~heater
-            NOVA KLAUZULA JE (17, [], (2, 16))
+            NOVA KLAUZULA JE (18, [], (2, 16))
 1. water
 2. heater
 3. tea_bag
@@ -2400,40 +2327,40 @@ FIRST CLAUSE FOR PETLJA (16, ['~heater'], (1, 14))
 8. ~tea
 ===============
 9. ~coffee_powder v ~hot_water (5, 7)
+10. ~coffee_powder v ~hot_water (5, 7)
 10. ~hot_water v ~tea_bag (6, 8)
 11. ~coffee_powder v ~water v ~heater (4, 9)
+11. ~hot_water v ~tea_bag (6, 8)
+12. ~coffee_powder v ~water v ~heater (4, 9)
 12. ~tea_bag v ~water v ~heater (4, 10)
 13. ~coffee_powder v ~heater (1, 11)
+13. ~tea_bag v ~water v ~heater (4, 10)
+14. ~coffee_powder v ~heater (1, 11)
 14. ~water v ~heater (3, 12)
-15. ~coffee_powder (2, 13)
+15. ~water v ~heater (3, 12)
+16. ~coffee_powder (2, 13)
 16. ~heater (1, 14)
-17. NIL (2, 16)
+17. ~heater (1, 14)
+18. NIL (2, 16)
 ===============
 [CONCLUSION]: coffee v tea is true
 
 - Passed test: resolution resolution_small_example_2.txt
 -> Complete obtained output:
-['c']
-[(1, ['a'], (None, None)), (2, ['b'], (None, None)), (3, ['~a', '~b', 'c'], (None, None)), (4, ['~c'], (None, None))]
-(1, ['a'], (None, None))
-(2, ['b'], (None, None))
-(3, ['~a', '~b', 'c'], (None, None))
-(4, ['~c'], (None, None))
-[(1, ['a'], (None, None)), (2, ['b'], (None, None)), (3, ['~a', '~b', 'c'], (None, None)), (4, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (4, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['~a', '~b', 'c'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (4, ['~c'], (None, None)) - (3, ['~a', '~b', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (5, ['~a', '~b'], (3, 4))
+            NOVA KLAUZULA JE (6, ['~a', '~b'], (3, 4))
       SECOND CLAUSE FOR PETLJA (4, ['~c'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~a', '~b'], (3, 4)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
 FIRST CLAUSE FOR PETLJA (5, ['~a', '~b'], (3, 4))
    LITERAL FOR PETLJA ~a
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (5, ['~a', '~b'], (3, 4))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~a', '~b'], (3, 4)) - (1, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (6, ['~b'], (1, 5))
+            NOVA KLAUZULA JE (7, ['~b'], (1, 5))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (5, ['~a', '~b'], (3, 4))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (5, ['~a', '~b'], (3, 4))
       SECOND CLAUSE FOR PETLJA (4, ['~c'], (None, None)), A FIRST CLAUSE JE (5, ['~a', '~b'], (3, 4))
@@ -2445,39 +2372,35 @@ FIRST CLAUSE FOR PETLJA (6, ['~b'], (1, 5))
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (6, ['~b'], (1, 5))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (6, ['~b'], (1, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~b'], (1, 5)) - (2, ['b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (7, [], (2, 6))
+            NOVA KLAUZULA JE (8, [], (2, 6))
 1. a
 2. b
 3. ~a v ~b v c
 4. ~c
 ===============
 5. ~a v ~b (3, 4)
+6. ~a v ~b (3, 4)
 6. ~b (1, 5)
-7. NIL (2, 6)
+7. ~b (1, 5)
+8. NIL (2, 6)
 ===============
 [CONCLUSION]: c is true
 
 - Passed test: resolution resolution_small_example_3.txt
 -> Complete obtained output:
-['c']
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', 'c'], (None, None)), (3, ['~c'], (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['~b', 'c'], (None, None))
-(3, ['~c'], (None, None))
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', 'c'], (None, None)), (3, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (3, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (3, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['~b', 'c'], (None, None)), A FIRST CLAUSE JE (3, ['~c'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (3, ['~c'], (None, None)) - (2, ['~b', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (4, ['~b'], (2, 3))
+            NOVA KLAUZULA JE (5, ['~b'], (2, 3))
       SECOND CLAUSE FOR PETLJA (3, ['~c'], (None, None)), A FIRST CLAUSE JE (3, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~b'], (2, 3)), A FIRST CLAUSE JE (3, ['~c'], (None, None))
 FIRST CLAUSE FOR PETLJA (4, ['~b'], (2, 3))
    LITERAL FOR PETLJA ~b
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (4, ['~b'], (2, 3))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (4, ['~b'], (2, 3)) - (1, ['~a', 'b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (5, ['~a'], (1, 4))
+            NOVA KLAUZULA JE (6, ['~a'], (1, 4))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (4, ['~b'], (2, 3))
       SECOND CLAUSE FOR PETLJA (3, ['~c'], (None, None)), A FIRST CLAUSE JE (4, ['~b'], (2, 3))
       SECOND CLAUSE FOR PETLJA (4, ['~b'], (2, 3)), A FIRST CLAUSE JE (4, ['~b'], (2, 3))
@@ -2500,15 +2423,6 @@ FIRST CLAUSE FOR PETLJA (3, ['~c'], (None, None))
 
 - Passed test: resolution resolution_small_example_4.txt
 -> Complete obtained output:
-['c', 'b']
-['~b']
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', 'c'], (None, None)), (3, ['a'], (None, None)), (4, ['~c'], (None, None)), (5, ['~b'], (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['~b', 'c'], (None, None))
-(3, ['a'], (None, None))
-(4, ['~c'], (None, None))
-(5, ['~b'], (None, None))
-[(1, ['~a', 'b'], (None, None)), None, (3, ['a'], (None, None)), (4, ['~c'], (None, None)), (5, ['~b'], (None, None))]
 FIRST CLAUSE FOR PETLJA (4, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
@@ -2520,7 +2434,7 @@ FIRST CLAUSE FOR PETLJA (5, ['~b'], (None, None))
    LITERAL FOR PETLJA ~b
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~b'], (None, None)) - (1, ['~a', 'b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (6, ['~a'], (1, 5))
+            NOVA KLAUZULA JE (7, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (5, ['~b'], (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['~c'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (None, None))
@@ -2532,44 +2446,33 @@ FIRST CLAUSE FOR PETLJA (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (6, ['~a'], (1, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~a'], (1, 5)) - (3, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (7, [], (3, 6))
+            NOVA KLAUZULA JE (8, [], (3, 6))
 1. ~a v b
 3. a
 5. ~b
 ===============
 6. ~a (1, 5)
-7. NIL (3, 6)
+7. ~a (1, 5)
+8. NIL (3, 6)
 ===============
 [CONCLUSION]: c v b is true
 
 - Passed test: resolution resolution_heldout_small.txt
 -> Complete obtained output:
-['a']
-[(1, ['a'], (None, None)), (2, ['~a'], (None, None))]
-(1, ['a'], (None, None))
-(2, ['~a'], (None, None))
-[(1, ['a'], (None, None)), (2, ['~a'], (None, None))]
 FIRST CLAUSE FOR PETLJA (2, ['~a'], (None, None))
    LITERAL FOR PETLJA ~a
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (2, ['~a'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (2, ['~a'], (None, None)) - (1, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (3, [], (1, 2))
+            NOVA KLAUZULA JE (4, [], (1, 2))
 1. a
 2. ~a
 ===============
-3. NIL (1, 2)
+4. NIL (1, 2)
 ===============
 [CONCLUSION]: a is true
 
 - Passed test: resolution resolution_heldout_small_2.txt
 -> Complete obtained output:
-['b', 'c']
-['~c']
-[(1, ['a'], (None, None)), (2, ['~b'], (None, None)), (3, ['~c'], (None, None))]
-(1, ['a'], (None, None))
-(2, ['~b'], (None, None))
-(3, ['~c'], (None, None))
-[(1, ['a'], (None, None)), (2, ['~b'], (None, None)), (3, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (2, ['~b'], (None, None))
    LITERAL FOR PETLJA ~b
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (2, ['~b'], (None, None))
@@ -2586,13 +2489,6 @@ FIRST CLAUSE FOR PETLJA (3, ['~c'], (None, None))
 
 - Passed test: resolution resolution_heldout_tautology.txt
 -> Complete obtained output:
-['c']
-[(1, ['~a', 'b'], (None, None)), (2, ['a', '~b', 'c'], (None, None)), (3, ['a'], (None, None)), (4, ['~c'], (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['a', '~b', 'c'], (None, None))
-(3, ['a'], (None, None))
-(4, ['~c'], (None, None))
-[(1, ['~a', 'b'], (None, None)), None, (3, ['a'], (None, None)), (4, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (4, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (4, ['~c'], (None, None))
@@ -2605,22 +2501,13 @@ FIRST CLAUSE FOR PETLJA (4, ['~c'], (None, None))
 
 - Passed test: resolution resolution_heldout_tautology_2.txt
 -> Complete obtained output:
-['c']
-[(1, ['~a', 'b'], (None, None)), (2, ['a', '~b', 'c'], (None, None)), (3, ['~a', '~d', 'c'], (None, None)), (4, ['d'], (None, None)), (5, ['a'], (None, None)), (6, ['~c'], (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['a', '~b', 'c'], (None, None))
-(3, ['~a', '~d', 'c'], (None, None))
-(4, ['d'], (None, None))
-(5, ['a'], (None, None))
-(6, ['~c'], (None, None))
-[(1, ['~a', 'b'], (None, None)), None, (3, ['~a', '~d', 'c'], (None, None)), (4, ['d'], (None, None)), (5, ['a'], (None, None)), (6, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (6, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (6, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['~a', '~d', 'c'], (None, None)), A FIRST CLAUSE JE (6, ['~c'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~c'], (None, None)) - (3, ['~a', '~d', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (7, ['~a', '~d'], (3, 6))
+            NOVA KLAUZULA JE (8, ['~a', '~d'], (3, 6))
       SECOND CLAUSE FOR PETLJA (4, ['d'], (None, None)), A FIRST CLAUSE JE (6, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['a'], (None, None)), A FIRST CLAUSE JE (6, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['~c'], (None, None)), A FIRST CLAUSE JE (6, ['~c'], (None, None))
@@ -2633,7 +2520,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~a', '~d'], (3, 6))
       SECOND CLAUSE FOR PETLJA (4, ['d'], (None, None)), A FIRST CLAUSE JE (7, ['~a', '~d'], (3, 6))
       SECOND CLAUSE FOR PETLJA (5, ['a'], (None, None)), A FIRST CLAUSE JE (7, ['~a', '~d'], (3, 6))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~a', '~d'], (3, 6)) - (5, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (8, ['~d'], (5, 7))
+            NOVA KLAUZULA JE (9, ['~d'], (5, 7))
       SECOND CLAUSE FOR PETLJA (6, ['~c'], (None, None)), A FIRST CLAUSE JE (7, ['~a', '~d'], (3, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (7, ['~a', '~d'], (3, 6))
       SECOND CLAUSE FOR PETLJA (8, ['~d'], (5, 7)), A FIRST CLAUSE JE (7, ['~a', '~d'], (3, 6))
@@ -2645,27 +2532,22 @@ FIRST CLAUSE FOR PETLJA (8, ['~d'], (5, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~d'], (5, 7))
       SECOND CLAUSE FOR PETLJA (4, ['d'], (None, None)), A FIRST CLAUSE JE (8, ['~d'], (5, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~d'], (5, 7)) - (4, ['d'], (None, None)) - ~d
-            NOVA KLAUZULA JE (9, [], (4, 8))
+            NOVA KLAUZULA JE (10, [], (4, 8))
 3. ~a v ~d v c
 4. d
 5. a
 6. ~c
 ===============
 7. ~a v ~d (3, 6)
+8. ~a v ~d (3, 6)
 8. ~d (5, 7)
-9. NIL (4, 8)
+9. ~d (5, 7)
+10. NIL (4, 8)
 ===============
 [CONCLUSION]: c is true
 
 - Passed test: resolution resolution_heldout_tautology_3.txt
 -> Complete obtained output:
-['a']
-[(1, ['~a', 'a', 'c'], (None, None)), (2, ['d'], (None, None)), (3, ['~a'], (None, None)), (4, ['~a'], (None, None))]
-(1, ['~a', 'a', 'c'], (None, None))
-(2, ['d'], (None, None))
-(3, ['~a'], (None, None))
-(4, ['~a'], (None, None))
-[None, (2, ['d'], (None, None)), (3, ['~a'], (None, None)), None]
 FIRST CLAUSE FOR PETLJA None
 ===============
 ===============
@@ -2673,15 +2555,6 @@ FIRST CLAUSE FOR PETLJA None
 
 - Passed test: resolution resolution_heldout_tautology_4.txt
 -> Complete obtained output:
-['a', 'b']
-['~b']
-[(1, ['~a', 'a', 'b'], (None, None)), (2, ['d'], (None, None)), (3, ['~a', '~d'], (None, None)), (4, ['~a'], (None, None)), (5, ['~b'], (None, None))]
-(1, ['~a', 'a', 'b'], (None, None))
-(2, ['d'], (None, None))
-(3, ['~a', '~d'], (None, None))
-(4, ['~a'], (None, None))
-(5, ['~b'], (None, None))
-[None, (2, ['d'], (None, None)), None, (4, ['~a'], (None, None)), (5, ['~b'], (None, None))]
 FIRST CLAUSE FOR PETLJA (4, ['~a'], (None, None))
    LITERAL FOR PETLJA ~a
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (4, ['~a'], (None, None))
@@ -2702,17 +2575,6 @@ FIRST CLAUSE FOR PETLJA (5, ['~b'], (None, None))
 
 - Passed test: resolution resolution_heldout_large_chain.txt
 -> Complete obtained output:
-['g']
-[(1, ['a'], (None, None)), (2, ['~a', 'b'], (None, None)), (3, ['~b', 'c'], (None, None)), (4, ['~c', 'd'], (None, None)), (5, ['~d', 'e'], (None, None)), (6, ['~e', 'f'], (None, None)), (7, ['~f', 'g'], (None, None)), (8, ['~g'], (None, None))]
-(1, ['a'], (None, None))
-(2, ['~a', 'b'], (None, None))
-(3, ['~b', 'c'], (None, None))
-(4, ['~c', 'd'], (None, None))
-(5, ['~d', 'e'], (None, None))
-(6, ['~e', 'f'], (None, None))
-(7, ['~f', 'g'], (None, None))
-(8, ['~g'], (None, None))
-[(1, ['a'], (None, None)), (2, ['~a', 'b'], (None, None)), (3, ['~b', 'c'], (None, None)), (4, ['~c', 'd'], (None, None)), (5, ['~d', 'e'], (None, None)), (6, ['~e', 'f'], (None, None)), (7, ['~f', 'g'], (None, None)), (8, ['~g'], (None, None))]
 FIRST CLAUSE FOR PETLJA (8, ['~g'], (None, None))
    LITERAL FOR PETLJA ~g
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (8, ['~g'], (None, None))
@@ -2723,7 +2585,7 @@ FIRST CLAUSE FOR PETLJA (8, ['~g'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['~e', 'f'], (None, None)), A FIRST CLAUSE JE (8, ['~g'], (None, None))
       SECOND CLAUSE FOR PETLJA (7, ['~f', 'g'], (None, None)), A FIRST CLAUSE JE (8, ['~g'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~g'], (None, None)) - (7, ['~f', 'g'], (None, None)) - ~g
-            NOVA KLAUZULA JE (9, ['~f'], (7, 8))
+            NOVA KLAUZULA JE (10, ['~f'], (7, 8))
       SECOND CLAUSE FOR PETLJA (8, ['~g'], (None, None)), A FIRST CLAUSE JE (8, ['~g'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~f'], (7, 8)), A FIRST CLAUSE JE (8, ['~g'], (None, None))
 FIRST CLAUSE FOR PETLJA (9, ['~f'], (7, 8))
@@ -2735,7 +2597,7 @@ FIRST CLAUSE FOR PETLJA (9, ['~f'], (7, 8))
       SECOND CLAUSE FOR PETLJA (5, ['~d', 'e'], (None, None)), A FIRST CLAUSE JE (9, ['~f'], (7, 8))
       SECOND CLAUSE FOR PETLJA (6, ['~e', 'f'], (None, None)), A FIRST CLAUSE JE (9, ['~f'], (7, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~f'], (7, 8)) - (6, ['~e', 'f'], (None, None)) - ~f
-            NOVA KLAUZULA JE (10, ['~e'], (6, 9))
+            NOVA KLAUZULA JE (11, ['~e'], (6, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~f'], (7, 8))
       SECOND CLAUSE FOR PETLJA (8, ['~g'], (None, None)), A FIRST CLAUSE JE (9, ['~f'], (7, 8))
       SECOND CLAUSE FOR PETLJA (9, ['~f'], (7, 8)), A FIRST CLAUSE JE (9, ['~f'], (7, 8))
@@ -2748,7 +2610,7 @@ FIRST CLAUSE FOR PETLJA (10, ['~e'], (6, 9))
       SECOND CLAUSE FOR PETLJA (4, ['~c', 'd'], (None, None)), A FIRST CLAUSE JE (10, ['~e'], (6, 9))
       SECOND CLAUSE FOR PETLJA (5, ['~d', 'e'], (None, None)), A FIRST CLAUSE JE (10, ['~e'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['~e'], (6, 9)) - (5, ['~d', 'e'], (None, None)) - ~e
-            NOVA KLAUZULA JE (11, ['~d'], (5, 10))
+            NOVA KLAUZULA JE (12, ['~d'], (5, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~e'], (6, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['~e'], (6, 9))
       SECOND CLAUSE FOR PETLJA (8, ['~g'], (None, None)), A FIRST CLAUSE JE (10, ['~e'], (6, 9))
@@ -2762,7 +2624,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~d'], (5, 10))
       SECOND CLAUSE FOR PETLJA (3, ['~b', 'c'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (5, 10))
       SECOND CLAUSE FOR PETLJA (4, ['~c', 'd'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (5, 10))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (5, 10)) - (4, ['~c', 'd'], (None, None)) - ~d
-            NOVA KLAUZULA JE (12, ['~c'], (4, 11))
+            NOVA KLAUZULA JE (13, ['~c'], (4, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (5, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (5, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (5, 10))
@@ -2777,7 +2639,7 @@ FIRST CLAUSE FOR PETLJA (12, ['~c'], (4, 11))
       SECOND CLAUSE FOR PETLJA (2, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (12, ['~c'], (4, 11))
       SECOND CLAUSE FOR PETLJA (3, ['~b', 'c'], (None, None)), A FIRST CLAUSE JE (12, ['~c'], (4, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (12, ['~c'], (4, 11)) - (3, ['~b', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (13, ['~b'], (3, 12))
+            NOVA KLAUZULA JE (14, ['~b'], (3, 12))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~c'], (4, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~c'], (4, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (12, ['~c'], (4, 11))
@@ -2793,7 +2655,7 @@ FIRST CLAUSE FOR PETLJA (13, ['~b'], (3, 12))
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (13, ['~b'], (3, 12))
       SECOND CLAUSE FOR PETLJA (2, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (13, ['~b'], (3, 12))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (13, ['~b'], (3, 12)) - (2, ['~a', 'b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (14, ['~a'], (2, 13))
+            NOVA KLAUZULA JE (15, ['~a'], (2, 13))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (13, ['~b'], (3, 12))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (13, ['~b'], (3, 12))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (13, ['~b'], (3, 12))
@@ -2810,7 +2672,7 @@ FIRST CLAUSE FOR PETLJA (14, ['~a'], (2, 13))
    LITERAL FOR PETLJA ~a
       SECOND CLAUSE FOR PETLJA (1, ['a'], (None, None)), A FIRST CLAUSE JE (14, ['~a'], (2, 13))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (14, ['~a'], (2, 13)) - (1, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (15, [], (1, 14))
+            NOVA KLAUZULA JE (16, [], (1, 14))
 1. a
 2. ~a v b
 3. ~b v c
@@ -2822,29 +2684,28 @@ FIRST CLAUSE FOR PETLJA (14, ['~a'], (2, 13))
 ===============
 9. ~f (7, 8)
 10. ~e (6, 9)
+10. ~f (7, 8)
 11. ~d (5, 10)
+11. ~e (6, 9)
 12. ~c (4, 11)
+12. ~d (5, 10)
 13. ~b (3, 12)
+13. ~c (4, 11)
 14. ~a (2, 13)
-15. NIL (1, 14)
+14. ~b (3, 12)
+15. ~a (2, 13)
+16. NIL (1, 14)
 ===============
 [CONCLUSION]: g is true
 
 - Passed test: resolution resolution_heldout_goal_isnegated.txt
 -> Complete obtained output:
-['~c']
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', '~c'], (None, None)), (3, ['a'], (None, None)), (4, 'c', (None, None))]
-(1, ['~a', 'b'], (None, None))
-(2, ['~b', '~c'], (None, None))
-(3, ['a'], (None, None))
-(4, 'c', (None, None))
-[(1, ['~a', 'b'], (None, None)), (2, ['~b', '~c'], (None, None)), (3, ['a'], (None, None)), (4, 'c', (None, None))]
 FIRST CLAUSE FOR PETLJA (4, 'c', (None, None))
    LITERAL FOR PETLJA c
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (4, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['~b', '~c'], (None, None)), A FIRST CLAUSE JE (4, 'c', (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (4, 'c', (None, None)) - (2, ['~b', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (5, ['~b'], (2, 4))
+            NOVA KLAUZULA JE (6, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (4, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (4, 'c', (None, None)), A FIRST CLAUSE JE (4, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['~b'], (2, 4)), A FIRST CLAUSE JE (4, 'c', (None, None))
@@ -2852,7 +2713,7 @@ FIRST CLAUSE FOR PETLJA (5, ['~b'], (2, 4))
    LITERAL FOR PETLJA ~b
       SECOND CLAUSE FOR PETLJA (1, ['~a', 'b'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~b'], (2, 4)) - (1, ['~a', 'b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (6, ['~a'], (1, 5))
+            NOVA KLAUZULA JE (7, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (5, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
       SECOND CLAUSE FOR PETLJA (4, 'c', (None, None)), A FIRST CLAUSE JE (5, ['~b'], (2, 4))
@@ -2864,7 +2725,7 @@ FIRST CLAUSE FOR PETLJA (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['~a'], (1, 5))
       SECOND CLAUSE FOR PETLJA (3, ['a'], (None, None)), A FIRST CLAUSE JE (6, ['~a'], (1, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['~a'], (1, 5)) - (3, ['a'], (None, None)) - ~a
-            NOVA KLAUZULA JE (7, [], (3, 6))
+            NOVA KLAUZULA JE (8, [], (3, 6))
 1. ~a v b
 2. ~b v ~c
 3. a
@@ -2872,20 +2733,14 @@ FIRST CLAUSE FOR PETLJA (6, ['~a'], (1, 5))
 ===============
 5. ~b (2, 4)
 6. ~a (1, 5)
-7. NIL (3, 6)
+6. ~b (2, 4)
+7. ~a (1, 5)
+8. NIL (3, 6)
 ===============
 [CONCLUSION]: ~c is true
 
 - Passed test: resolution new_example_1.txt
 -> Complete obtained output:
-['c']
-[(1, ['a', 'b', 'c'], (None, None)), (2, ['~a', '~c'], (None, None)), (3, ['a', '~b'], (None, None)), (4, ['b', 'c'], (None, None)), (5, ['~c'], (None, None))]
-(1, ['a', 'b', 'c'], (None, None))
-(2, ['~a', '~c'], (None, None))
-(3, ['a', '~b'], (None, None))
-(4, ['b', 'c'], (None, None))
-(5, ['~c'], (None, None))
-[None, None, (3, ['a', '~b'], (None, None)), (4, ['b', 'c'], (None, None)), (5, ['~c'], (None, None))]
 FIRST CLAUSE FOR PETLJA (5, ['~c'], (None, None))
    LITERAL FOR PETLJA ~c
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (5, ['~c'], (None, None))
@@ -2893,7 +2748,7 @@ FIRST CLAUSE FOR PETLJA (5, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['a', '~b'], (None, None)), A FIRST CLAUSE JE (5, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['b', 'c'], (None, None)), A FIRST CLAUSE JE (5, ['~c'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (5, ['~c'], (None, None)) - (4, ['b', 'c'], (None, None)) - ~c
-            NOVA KLAUZULA JE (6, ['b'], (4, 5))
+            NOVA KLAUZULA JE (7, ['b'], (4, 5))
       SECOND CLAUSE FOR PETLJA (5, ['~c'], (None, None)), A FIRST CLAUSE JE (5, ['~c'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['b'], (4, 5)), A FIRST CLAUSE JE (5, ['~c'], (None, None))
 FIRST CLAUSE FOR PETLJA (6, ['b'], (4, 5))
@@ -2902,7 +2757,7 @@ FIRST CLAUSE FOR PETLJA (6, ['b'], (4, 5))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['b'], (4, 5))
       SECOND CLAUSE FOR PETLJA (3, ['a', '~b'], (None, None)), A FIRST CLAUSE JE (6, ['b'], (4, 5))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, ['b'], (4, 5)) - (3, ['a', '~b'], (None, None)) - b
-            NOVA KLAUZULA JE (7, ['a'], (3, 6))
+            NOVA KLAUZULA JE (8, ['a'], (3, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, ['b'], (4, 5))
       SECOND CLAUSE FOR PETLJA (5, ['~c'], (None, None)), A FIRST CLAUSE JE (6, ['b'], (4, 5))
       SECOND CLAUSE FOR PETLJA (6, ['b'], (4, 5)), A FIRST CLAUSE JE (6, ['b'], (4, 5))
@@ -2929,25 +2784,16 @@ FIRST CLAUSE FOR PETLJA (5, ['~c'], (None, None))
 
 - Passed test: resolution new_example_2.txt
 -> Complete obtained output:
-['~c']
-[(1, ['~a', 'b', 'c'], (None, None)), (2, ['b'], (None, None)), (3, ['~a', '~c'], (None, None)), (4, ['a', '~b', '~c'], (None, None)), (5, ['b', 'c'], (None, None)), (6, 'c', (None, None))]
-(1, ['~a', 'b', 'c'], (None, None))
-(2, ['b'], (None, None))
-(3, ['~a', '~c'], (None, None))
-(4, ['a', '~b', '~c'], (None, None))
-(5, ['b', 'c'], (None, None))
-(6, 'c', (None, None))
-[None, (2, ['b'], (None, None)), (3, ['~a', '~c'], (None, None)), (4, ['a', '~b', '~c'], (None, None)), None, (6, 'c', (None, None))]
 FIRST CLAUSE FOR PETLJA (6, 'c', (None, None))
    LITERAL FOR PETLJA c
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['~a', '~c'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, 'c', (None, None)) - (3, ['~a', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (7, ['~a'], (3, 6))
+            NOVA KLAUZULA JE (8, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (4, ['a', '~b', '~c'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, 'c', (None, None)) - (4, ['a', '~b', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (8, ['a', '~b'], (4, 6))
+            NOVA KLAUZULA JE (9, ['a', '~b'], (4, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (6, 'c', (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (7, ['~a'], (3, 6)), A FIRST CLAUSE JE (6, 'c', (None, None))
@@ -2963,7 +2809,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (7, ['~a'], (3, 6)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (8, ['a', '~b'], (4, 6)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~a'], (3, 6)) - (8, ['a', '~b'], (4, 6)) - ~a
-            NOVA KLAUZULA JE (9, ['~b'], (8, 7))
+            NOVA KLAUZULA JE (10, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA (9, ['~b'], (8, 7)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
 FIRST CLAUSE FOR PETLJA None
 FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
@@ -2971,7 +2817,7 @@ FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (9, ['~b'], (8, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~b'], (8, 7)) - (2, ['b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (10, [], (2, 9))
+            NOVA KLAUZULA JE (11, [], (2, 9))
 2. b
 3. ~a v ~c
 4. a v ~b v ~c
@@ -2979,32 +2825,26 @@ FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
 ===============
 7. ~a (3, 6)
 8. a v ~b (4, 6)
+8. ~a (3, 6)
+9. a v ~b (4, 6)
 9. ~b (8, 7)
-10. NIL (2, 9)
+10. ~b (8, 7)
+11. NIL (2, 9)
 ===============
 [CONCLUSION]: ~c is true
 
 - Passed test: resolution new_example_3.txt
 -> Complete obtained output:
-['~c']
-[(1, ['~a', 'b', 'c', '~c'], (None, None)), (2, ['b'], (None, None)), (3, ['~a', '~c'], (None, None)), (4, ['a', '~b', '~c'], (None, None)), (5, ['b', 'c'], (None, None)), (6, 'c', (None, None))]
-(1, ['~a', 'b', 'c', '~c'], (None, None))
-(2, ['b'], (None, None))
-(3, ['~a', '~c'], (None, None))
-(4, ['a', '~b', '~c'], (None, None))
-(5, ['b', 'c'], (None, None))
-(6, 'c', (None, None))
-[None, (2, ['b'], (None, None)), (3, ['~a', '~c'], (None, None)), (4, ['a', '~b', '~c'], (None, None)), None, (6, 'c', (None, None))]
 FIRST CLAUSE FOR PETLJA (6, 'c', (None, None))
    LITERAL FOR PETLJA c
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (3, ['~a', '~c'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, 'c', (None, None)) - (3, ['~a', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (7, ['~a'], (3, 6))
+            NOVA KLAUZULA JE (8, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (4, ['a', '~b', '~c'], (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (6, 'c', (None, None)) - (4, ['a', '~b', '~c'], (None, None)) - c
-            NOVA KLAUZULA JE (8, ['a', '~b'], (4, 6))
+            NOVA KLAUZULA JE (9, ['a', '~b'], (4, 6))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (6, 'c', (None, None)), A FIRST CLAUSE JE (6, 'c', (None, None))
       SECOND CLAUSE FOR PETLJA (7, ['~a'], (3, 6)), A FIRST CLAUSE JE (6, 'c', (None, None))
@@ -3020,7 +2860,7 @@ FIRST CLAUSE FOR PETLJA (7, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (7, ['~a'], (3, 6)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
       SECOND CLAUSE FOR PETLJA (8, ['a', '~b'], (4, 6)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (7, ['~a'], (3, 6)) - (8, ['a', '~b'], (4, 6)) - ~a
-            NOVA KLAUZULA JE (9, ['~b'], (8, 7))
+            NOVA KLAUZULA JE (10, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA (9, ['~b'], (8, 7)), A FIRST CLAUSE JE (7, ['~a'], (3, 6))
 FIRST CLAUSE FOR PETLJA None
 FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
@@ -3028,7 +2868,7 @@ FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~b'], (8, 7))
       SECOND CLAUSE FOR PETLJA (2, ['b'], (None, None)), A FIRST CLAUSE JE (9, ['~b'], (8, 7))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~b'], (8, 7)) - (2, ['b'], (None, None)) - ~b
-            NOVA KLAUZULA JE (10, [], (2, 9))
+            NOVA KLAUZULA JE (11, [], (2, 9))
 2. b
 3. ~a v ~c
 4. a v ~b v ~c
@@ -3036,33 +2876,25 @@ FIRST CLAUSE FOR PETLJA (9, ['~b'], (8, 7))
 ===============
 7. ~a (3, 6)
 8. a v ~b (4, 6)
+8. ~a (3, 6)
+9. a v ~b (4, 6)
 9. ~b (8, 7)
-10. NIL (2, 9)
+10. ~b (8, 7)
+11. NIL (2, 9)
 ===============
 [CONCLUSION]: ~c is true
 
 - Passed test: resolution new_example_4.txt
 -> Complete obtained output:
-['d']
-[(1, ['~a', 'b', 'd'], (None, None)), (2, ['b', 'd'], (None, None)), (3, ['d', '~c'], (None, None)), (4, ['c', '~a', '~b'], (None, None)), (5, ['a', '~b', '~c'], (None, None)), (6, ['b', 'c', '~d', 'a'], (None, None)), (7, ['c', '~b'], (None, None)), (8, ['~d'], (None, None))]
-(1, ['~a', 'b', 'd'], (None, None))
-(2, ['b', 'd'], (None, None))
-(3, ['d', '~c'], (None, None))
-(4, ['c', '~a', '~b'], (None, None))
-(5, ['a', '~b', '~c'], (None, None))
-(6, ['b', 'c', '~d', 'a'], (None, None))
-(7, ['c', '~b'], (None, None))
-(8, ['~d'], (None, None))
-[None, (2, ['b', 'd'], (None, None)), (3, ['d', '~c'], (None, None)), None, (5, ['a', '~b', '~c'], (None, None)), None, (7, ['c', '~b'], (None, None)), (8, ['~d'], (None, None))]
 FIRST CLAUSE FOR PETLJA (8, ['~d'], (None, None))
    LITERAL FOR PETLJA ~d
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~d'], (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['b', 'd'], (None, None)), A FIRST CLAUSE JE (8, ['~d'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~d'], (None, None)) - (2, ['b', 'd'], (None, None)) - ~d
-            NOVA KLAUZULA JE (9, ['b'], (2, 8))
+            NOVA KLAUZULA JE (10, ['b'], (2, 8))
       SECOND CLAUSE FOR PETLJA (3, ['d', '~c'], (None, None)), A FIRST CLAUSE JE (8, ['~d'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (8, ['~d'], (None, None)) - (3, ['d', '~c'], (None, None)) - ~d
-            NOVA KLAUZULA JE (10, ['~c'], (3, 8))
+            NOVA KLAUZULA JE (11, ['~c'], (3, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~d'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~d'], (None, None))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (8, ['~d'], (None, None))
@@ -3080,7 +2912,7 @@ FIRST CLAUSE FOR PETLJA (9, ['b'], (2, 8))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['b'], (2, 8))
       SECOND CLAUSE FOR PETLJA (7, ['c', '~b'], (None, None)), A FIRST CLAUSE JE (9, ['b'], (2, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['b'], (2, 8)) - (7, ['c', '~b'], (None, None)) - b
-            NOVA KLAUZULA JE (11, ['c'], (7, 9))
+            NOVA KLAUZULA JE (12, ['c'], (7, 9))
       SECOND CLAUSE FOR PETLJA (8, ['~d'], (None, None)), A FIRST CLAUSE JE (9, ['b'], (2, 8))
       SECOND CLAUSE FOR PETLJA (9, ['b'], (2, 8)), A FIRST CLAUSE JE (9, ['b'], (2, 8))
       SECOND CLAUSE FOR PETLJA (10, ['~c'], (3, 8)), A FIRST CLAUSE JE (9, ['b'], (2, 8))
@@ -3099,45 +2931,36 @@ FIRST CLAUSE FOR PETLJA (10, ['~c'], (3, 8))
       SECOND CLAUSE FOR PETLJA (10, ['~c'], (3, 8)), A FIRST CLAUSE JE (10, ['~c'], (3, 8))
       SECOND CLAUSE FOR PETLJA (11, ['c'], (7, 9)), A FIRST CLAUSE JE (10, ['~c'], (3, 8))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['~c'], (3, 8)) - (11, ['c'], (7, 9)) - ~c
-            NOVA KLAUZULA JE (12, [], (11, 10))
+            NOVA KLAUZULA JE (13, [], (11, 10))
 2. b v d
 3. d v ~c
 7. c v ~b
 8. ~d
 ===============
 9. b (2, 8)
+10. b (2, 8)
 10. ~c (3, 8)
 11. c (7, 9)
-12. NIL (11, 10)
+11. ~c (3, 8)
+12. c (7, 9)
+13. NIL (11, 10)
 ===============
 [CONCLUSION]: d is true
 
 - Passed test: resolution new_example_5.txt
 -> Complete obtained output:
-['e']
-[(1, ['~a', '~b', 'd', 'f'], (None, None)), (2, ['b', 'd', 'e'], (None, None)), (3, ['d', '~c', '~f'], (None, None)), (4, ['c', '~a', '~b'], (None, None)), (5, ['a', '~b', '~c'], (None, None)), (6, ['e', '~d'], (None, None)), (7, ['b', 'c', '~d', 'f', 'a'], (None, None)), (8, ['c', '~b', 'd'], (None, None)), (9, ['~e'], (None, None))]
-(1, ['~a', '~b', 'd', 'f'], (None, None))
-(2, ['b', 'd', 'e'], (None, None))
-(3, ['d', '~c', '~f'], (None, None))
-(4, ['c', '~a', '~b'], (None, None))
-(5, ['a', '~b', '~c'], (None, None))
-(6, ['e', '~d'], (None, None))
-(7, ['b', 'c', '~d', 'f', 'a'], (None, None))
-(8, ['c', '~b', 'd'], (None, None))
-(9, ['~e'], (None, None))
-[(1, ['~a', '~b', 'd', 'f'], (None, None)), (2, ['b', 'd', 'e'], (None, None)), (3, ['d', '~c', '~f'], (None, None)), (4, ['c', '~a', '~b'], (None, None)), (5, ['a', '~b', '~c'], (None, None)), (6, ['e', '~d'], (None, None)), (7, ['b', 'c', '~d', 'f', 'a'], (None, None)), (8, ['c', '~b', 'd'], (None, None)), (9, ['~e'], (None, None))]
 FIRST CLAUSE FOR PETLJA (9, ['~e'], (None, None))
    LITERAL FOR PETLJA ~e
       SECOND CLAUSE FOR PETLJA (1, ['~a', '~b', 'd', 'f'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (2, ['b', 'd', 'e'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~e'], (None, None)) - (2, ['b', 'd', 'e'], (None, None)) - ~e
-            NOVA KLAUZULA JE (10, ['b', 'd'], (2, 9))
+            NOVA KLAUZULA JE (11, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (3, ['d', '~c', '~f'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (4, ['c', '~a', '~b'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (5, ['a', '~b', '~c'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (6, ['e', '~d'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (9, ['~e'], (None, None)) - (6, ['e', '~d'], (None, None)) - ~e
-            NOVA KLAUZULA JE (11, ['~d'], (6, 9))
+            NOVA KLAUZULA JE (12, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (8, ['c', '~b', 'd'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
       SECOND CLAUSE FOR PETLJA (9, ['~e'], (None, None)), A FIRST CLAUSE JE (9, ['~e'], (None, None))
@@ -3147,20 +2970,20 @@ FIRST CLAUSE FOR PETLJA (10, ['b', 'd'], (2, 9))
    LITERAL FOR PETLJA b
       SECOND CLAUSE FOR PETLJA (1, ['~a', '~b', 'd', 'f'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['b', 'd'], (2, 9)) - (1, ['~a', '~b', 'd', 'f'], (None, None)) - b
-            NOVA KLAUZULA JE (12, ['d', '~a', 'f'], (1, 10))
+            NOVA KLAUZULA JE (13, ['d', '~a', 'f'], (1, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (3, ['d', '~c', '~f'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (4, ['c', '~a', '~b'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['b', 'd'], (2, 9)) - (4, ['c', '~a', '~b'], (None, None)) - b
-            NOVA KLAUZULA JE (13, ['d', 'c', '~a'], (4, 10))
+            NOVA KLAUZULA JE (14, ['d', 'c', '~a'], (4, 10))
       SECOND CLAUSE FOR PETLJA (5, ['a', '~b', '~c'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['b', 'd'], (2, 9)) - (5, ['a', '~b', '~c'], (None, None)) - b
-            NOVA KLAUZULA JE (14, ['d', 'a', '~c'], (5, 10))
+            NOVA KLAUZULA JE (15, ['d', 'a', '~c'], (5, 10))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (8, ['c', '~b', 'd'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (10, ['b', 'd'], (2, 9)) - (8, ['c', '~b', 'd'], (None, None)) - b
-            NOVA KLAUZULA JE (15, ['d', 'c'], (8, 10))
+            NOVA KLAUZULA JE (16, ['d', 'c'], (8, 10))
       SECOND CLAUSE FOR PETLJA (9, ['~e'], (None, None)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (10, ['b', 'd'], (2, 9)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
       SECOND CLAUSE FOR PETLJA (11, ['~d'], (6, 9)), A FIRST CLAUSE JE (10, ['b', 'd'], (2, 9))
@@ -3175,7 +2998,7 @@ FIRST CLAUSE FOR PETLJA (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (3, ['d', '~c', '~f'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (6, 9)) - (3, ['d', '~c', '~f'], (None, None)) - ~d
-            NOVA KLAUZULA JE (16, ['~c', '~f'], (3, 11))
+            NOVA KLAUZULA JE (17, ['~c', '~f'], (3, 11))
       SECOND CLAUSE FOR PETLJA (4, ['c', '~a', '~b'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (5, ['a', '~b', '~c'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (6, 9))
@@ -3184,18 +3007,18 @@ FIRST CLAUSE FOR PETLJA (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (9, ['~e'], (None, None)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (10, ['b', 'd'], (2, 9)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (6, 9)) - (10, ['b', 'd'], (2, 9)) - ~d
-            NOVA KLAUZULA JE (17, ['b'], (10, 11))
+            NOVA KLAUZULA JE (18, ['b'], (10, 11))
       SECOND CLAUSE FOR PETLJA (11, ['~d'], (6, 9)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (12, ['d', '~a', 'f'], (1, 10)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (6, 9)) - (12, ['d', '~a', 'f'], (1, 10)) - ~d
-            NOVA KLAUZULA JE (18, ['~a', 'f'], (12, 11))
+            NOVA KLAUZULA JE (19, ['~a', 'f'], (12, 11))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (14, ['d', 'a', '~c'], (5, 10)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (6, 9)) - (14, ['d', 'a', '~c'], (5, 10)) - ~d
-            NOVA KLAUZULA JE (19, ['a', '~c'], (14, 11))
+            NOVA KLAUZULA JE (20, ['a', '~c'], (14, 11))
       SECOND CLAUSE FOR PETLJA (15, ['d', 'c'], (8, 10)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (11, ['~d'], (6, 9)) - (15, ['d', 'c'], (8, 10)) - ~d
-            NOVA KLAUZULA JE (20, ['c'], (15, 11))
+            NOVA KLAUZULA JE (21, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (16, ['~c', '~f'], (3, 11)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (17, ['b'], (10, 11)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
       SECOND CLAUSE FOR PETLJA (18, ['~a', 'f'], (12, 11)), A FIRST CLAUSE JE (11, ['~d'], (6, 9))
@@ -3228,7 +3051,7 @@ FIRST CLAUSE FOR PETLJA (16, ['~c', '~f'], (3, 11))
       SECOND CLAUSE FOR PETLJA (19, ['a', '~c'], (14, 11)), A FIRST CLAUSE JE (16, ['~c', '~f'], (3, 11))
       SECOND CLAUSE FOR PETLJA (20, ['c'], (15, 11)), A FIRST CLAUSE JE (16, ['~c', '~f'], (3, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (16, ['~c', '~f'], (3, 11)) - (20, ['c'], (15, 11)) - ~c
-            NOVA KLAUZULA JE (21, ['~f'], (20, 16))
+            NOVA KLAUZULA JE (22, ['~f'], (20, 16))
       SECOND CLAUSE FOR PETLJA (21, ['~f'], (20, 16)), A FIRST CLAUSE JE (16, ['~c', '~f'], (3, 11))
    LITERAL FOR PETLJA ~f
 FIRST CLAUSE FOR PETLJA (17, ['b'], (10, 11))
@@ -3276,7 +3099,7 @@ FIRST CLAUSE FOR PETLJA (18, ['~a', 'f'], (12, 11))
       SECOND CLAUSE FOR PETLJA (18, ['~a', 'f'], (12, 11)), A FIRST CLAUSE JE (18, ['~a', 'f'], (12, 11))
       SECOND CLAUSE FOR PETLJA (19, ['a', '~c'], (14, 11)), A FIRST CLAUSE JE (18, ['~a', 'f'], (12, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (18, ['~a', 'f'], (12, 11)) - (19, ['a', '~c'], (14, 11)) - ~a
-            NOVA KLAUZULA JE (22, ['f', '~c'], (19, 18))
+            NOVA KLAUZULA JE (23, ['f', '~c'], (19, 18))
       SECOND CLAUSE FOR PETLJA (20, ['c'], (15, 11)), A FIRST CLAUSE JE (18, ['~a', 'f'], (12, 11))
       SECOND CLAUSE FOR PETLJA (21, ['~f'], (20, 16)), A FIRST CLAUSE JE (18, ['~a', 'f'], (12, 11))
       SECOND CLAUSE FOR PETLJA (22, ['f', '~c'], (19, 18)), A FIRST CLAUSE JE (18, ['~a', 'f'], (12, 11))
@@ -3302,7 +3125,7 @@ FIRST CLAUSE FOR PETLJA (19, ['a', '~c'], (14, 11))
       SECOND CLAUSE FOR PETLJA (17, ['b'], (10, 11)), A FIRST CLAUSE JE (19, ['a', '~c'], (14, 11))
       SECOND CLAUSE FOR PETLJA (18, ['~a', 'f'], (12, 11)), A FIRST CLAUSE JE (19, ['a', '~c'], (14, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (19, ['a', '~c'], (14, 11)) - (18, ['~a', 'f'], (12, 11)) - a
-            NOVA KLAUZULA JE None
+            NOVA KLAUZULA JE (23, ['f', '~c'], (19, 18))
       SECOND CLAUSE FOR PETLJA (19, ['a', '~c'], (14, 11)), A FIRST CLAUSE JE (19, ['a', '~c'], (14, 11))
       SECOND CLAUSE FOR PETLJA (20, ['c'], (15, 11)), A FIRST CLAUSE JE (19, ['a', '~c'], (14, 11))
       SECOND CLAUSE FOR PETLJA (21, ['~f'], (20, 16)), A FIRST CLAUSE JE (19, ['a', '~c'], (14, 11))
@@ -3331,12 +3154,12 @@ FIRST CLAUSE FOR PETLJA (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (18, ['~a', 'f'], (12, 11)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (19, ['a', '~c'], (14, 11)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['c'], (15, 11)) - (19, ['a', '~c'], (14, 11)) - c
-            NOVA KLAUZULA JE (24, ['a'], (19, 20))
+            NOVA KLAUZULA JE (25, ['a'], (19, 20))
       SECOND CLAUSE FOR PETLJA (20, ['c'], (15, 11)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (21, ['~f'], (20, 16)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (22, ['f', '~c'], (19, 18)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (20, ['c'], (15, 11)) - (22, ['f', '~c'], (19, 18)) - c
-            NOVA KLAUZULA JE (25, ['f'], (22, 20))
+            NOVA KLAUZULA JE (26, ['f'], (22, 20))
       SECOND CLAUSE FOR PETLJA None, A FIRST CLAUSE JE (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (24, ['a'], (19, 20)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
       SECOND CLAUSE FOR PETLJA (25, ['f'], (22, 20)), A FIRST CLAUSE JE (20, ['c'], (15, 11))
@@ -3368,7 +3191,7 @@ FIRST CLAUSE FOR PETLJA (21, ['~f'], (20, 16))
       SECOND CLAUSE FOR PETLJA (24, ['a'], (19, 20)), A FIRST CLAUSE JE (21, ['~f'], (20, 16))
       SECOND CLAUSE FOR PETLJA (25, ['f'], (22, 20)), A FIRST CLAUSE JE (21, ['~f'], (20, 16))
          PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA (21, ['~f'], (20, 16)) - (25, ['f'], (22, 20)) - ~f
-            NOVA KLAUZULA JE (26, [], (25, 21))
+            NOVA KLAUZULA JE (27, [], (25, 21))
 1. ~a v ~b v d v f
 2. b v d v e
 3. d v ~c v ~f
@@ -3379,22 +3202,33 @@ FIRST CLAUSE FOR PETLJA (21, ['~f'], (20, 16))
 9. ~e
 ===============
 10. b v d (2, 9)
+11. b v d (2, 9)
 11. ~d (6, 9)
 12. d v ~a v f (1, 10)
-13. d v c v ~a (4, 10)
+12. ~d (6, 9)
+13. d v ~a v f (1, 10)
 14. d v a v ~c (5, 10)
+14. d v c v ~a (4, 10)
+15. d v a v ~c (5, 10)
 15. d v c (8, 10)
+16. d v c (8, 10)
 16. ~c v ~f (3, 11)
-17. b (10, 11)
+17. ~c v ~f (3, 11)
+18. b (10, 11)
 18. ~a v f (12, 11)
 19. a v ~c (14, 11)
+19. ~a v f (12, 11)
+20. a v ~c (14, 11)
 20. c (15, 11)
+21. c (15, 11)
 21. ~f (20, 16)
 22. f v ~c (19, 18)
-23. ~c v f (18, 19)
-24. a (19, 20)
+22. ~f (20, 16)
+23. f v ~c (19, 18)
+25. a (19, 20)
 25. f (22, 20)
-26. NIL (25, 21)
+26. f (22, 20)
+27. NIL (25, 21)
 ===============
 [CONCLUSION]: e is true
 

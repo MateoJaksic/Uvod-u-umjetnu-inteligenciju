@@ -18,7 +18,7 @@ def get_commands(path_to_user_commands):
     with open(path_to_user_commands, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    commands = [(line.rstrip()[:-2], line.rsplit()[-1]) for line in lines if line[0] != "#"]
+    commands = [(line.rstrip()[:-2].lower(), line.rsplit()[-1]) for line in lines if line[0] != "#"]
     return commands
 
 
@@ -85,11 +85,8 @@ def factorization(clause):
 
 # Funkcija za izgradnju klauzule
 def clause_builder(first_clause, second_clause, literal, index_last):
-    print(f"{first_clause}, {second_clause}, {literal}, {index_last}")
 
     clause = [curr_literal for curr_literal in chain(first_clause[1], second_clause[1]) if (curr_literal != literal and curr_literal != negate_literal(literal))]
-
-    print(clause)
 
     return (index_last, factorization(clause), (second_clause[0], first_clause[0]))
 
@@ -113,33 +110,32 @@ def resolution(clauses):
             clauses[clauses.index(clause)] = None
 
     clauses = coverage_check(clauses)
-    print(clauses)
 
     found = False
     index = finish_index
     while index < len(clauses):
         first_clause = clauses[index]
         found = False
-        print(f"FIRST CLAUSE FOR PETLJA {first_clause}")
+        #print(f"FIRST CLAUSE FOR PETLJA {first_clause}")
         if first_clause != None:
             for literal in first_clause[1]:
-                print(f"   LITERAL FOR PETLJA {literal}")
+                #print(f"   LITERAL FOR PETLJA {literal}")
                 if found == False:
                     for second_clause in clauses:
-                        print(f"      SECOND CLAUSE FOR PETLJA {second_clause}, A FIRST CLAUSE JE {first_clause}")
+                        #print(f"      SECOND CLAUSE FOR PETLJA {second_clause}, A FIRST CLAUSE JE {first_clause}")
                         if second_clause != None and (first_clause[0], second_clause[0]) not in used_clauses_pairs:
                             if negate_literal(literal) in second_clause[1]:
-                                print(f"         PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA {first_clause} - {second_clause} - {literal}")
+                                #print(f"         PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA {first_clause} - {second_clause} - {literal}")
                                 found = True
                                 if first_clause not in expanded_clauses:
                                     expanded_clauses.append(first_clause)
                                 if second_clause not in expanded_clauses:
                                     expanded_clauses.append(second_clause)
-                                expanded_clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
                                 clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
-                                print(f"OVDJEEEEEEEE {clause_builder(first_clause, second_clause, literal, len(clauses) + 1)}")
                                 clauses = coverage_check(clauses)
-                                print(f"            NOVA KLAUZULA JE {clauses[-1]}")
+                                if clauses[-1] != None:
+                                    expanded_clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
+                                #print(f"            NOVA KLAUZULA JE {expanded_clauses[-1]}")
                                 used_clauses_pairs.append((first_clause[0], second_clause[0]))
 
                                 if expanded_clauses[-1][1] == []:
@@ -161,16 +157,16 @@ def resolution(clauses):
             while index < len(clauses):
                 first_clause = clauses[index]
                 found = False
-                print(f"FIRST CLAUSE FOR PETLJA {first_clause}")
+                #print(f"FIRST CLAUSE FOR PETLJA {first_clause}")
                 if first_clause != None:
                     for literal in reversed(first_clause[1]):
-                        print(f"   LITERAL FOR PETLJA {literal}")
+                        #print(f"   LITERAL FOR PETLJA {literal}")
                         if found == False:
                             for second_clause in clauses:
-                                print(f"      SECOND CLAUSE FOR PETLJA {second_clause}, A FIRST CLAUSE JE {first_clause}")
+                                #print(f"      SECOND CLAUSE FOR PETLJA {second_clause}, A FIRST CLAUSE JE {first_clause}")
                                 if second_clause != None and (first_clause[0], second_clause[0]) not in used_clauses_pairs:
                                     if negate_literal(literal) in second_clause[1]:
-                                        print(f"         PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA {first_clause} - {second_clause} - {literal}")
+                                        #print(f"         PRONAĐENI KOMPLEMENTARNI LITERALI IF ZA {first_clause} - {second_clause} - {literal}")
                                         found = True
                                         if first_clause not in expanded_clauses:
                                             expanded_clauses.append(first_clause)
@@ -179,7 +175,7 @@ def resolution(clauses):
                                         expanded_clauses.append(clause_builder(first_clause, second_clause, literal, clauses[-1][0]))
                                         clauses.append(clause_builder(first_clause, second_clause, literal, clauses[-1][0]))
                                         clauses = coverage_check(clauses)
-                                        print(f"         NOVA KLAUZULA JE {clauses[-1]}")
+                                        #print(f"         NOVA KLAUZULA JE {clauses[-1]}")
                                         used_clauses_pairs.append((first_clause[0], second_clause[0]))
 
                                         if expanded_clauses[-1][1] == []:
@@ -193,6 +189,45 @@ def resolution(clauses):
 
     return False, expanded_clauses
 
+
+# Funkcija za podzadatak cooking
+def cooking(clauses, commands):
+    knowledge_base = []
+    
+    print(f"Constructed with knowledge:")
+    for clause in clauses:
+        knowledge_base.append(clause[1])
+        print(f"{' v '.join(clause[1])}")
+
+    for command in commands:
+        print()
+        cooking_clauses = []
+        if command[1] == "?":
+            print(f"User's command: {command[0]} {command[1]}")
+            counter = 1
+            for knowledge in knowledge_base:
+                cooking_clauses.append((counter, knowledge, (None, None))) 
+                counter += 1
+            cooking_clauses.append((counter, [command[0]], (None, None)))
+            successful, expanded_clauses = resolution(cooking_clauses)
+            print(expanded_clauses)
+            [print(f"{expanded_clause[0]}. {' v '.join(expanded_clause[1])}") for expanded_clause in sorted(expanded_clauses) if expanded_clause[1] in knowledge_base]
+            print(f"{len(cooking_clauses)-1}. {negate_literal(command[0])}")
+            print("===============")
+            [print(f"{expanded_clause[0]}. {' v '.join(expanded_clause[1])} ({expanded_clause[2][0]}, {expanded_clause[2][1]})") for expanded_clause in sorted(expanded_clauses) if expanded_clause[1] not in chain(knowledge_base, [[negate_literal(command[0])]])]
+            print("===============")
+            if successful == True:
+                print(f"[CONCLUSION]: {command[0]} is true")
+            else:
+                print(f"[CONCLUSION]: {command[0]} is unknown")
+        elif command[1] == "+":
+            if command[0] not in knowledge_base:
+                knowledge_base.append(command[0])
+        elif command[1] == "-":
+            if command[0] in knowledge_base:
+                knowledge_base.pop(knowledge_base.index(command[0]))
+
+    return True
 
 
 # Glavna funkcija 
@@ -227,6 +262,7 @@ def main():
         if flag == "cooking":
             clauses = get_clauses(path_to_clauses)
             commands = get_commands(path_to_user_commands)
+            cooking(clauses, commands)
 
 
 if __name__ == "__main__":

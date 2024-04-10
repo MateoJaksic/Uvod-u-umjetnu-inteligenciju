@@ -24,7 +24,6 @@ def get_commands(path_to_user_commands):
 
 # Funkcija za negiranje klauzule
 def negate_clause(clause):
-    print(clause)
     if len(clause) == 1:
         if clause[0][0] == "~":
             return clause[0][1:]
@@ -86,6 +85,7 @@ def factorization(clause):
 
 # Funkcija za izgradnju klauzule
 def clause_builder(first_clause, second_clause, literal, index_last):
+
     clause = [curr_literal for curr_literal in chain(first_clause[1], second_clause[1]) if (curr_literal != literal and curr_literal != negate_literal(literal))]
 
     return (index_last, factorization(clause), (second_clause[0], first_clause[0]))
@@ -100,21 +100,16 @@ def resolution(clauses):
             clauses[counter] = (clauses[counter][0], clause, (None, None))
             counter += 1
         else:
-            print(clause)
             clauses.append((clauses[-1][0] + 1, clause, (None, None)))
             counter += 1
     expanded_clauses = []
     used_clauses_pairs = []
 
-    print(clauses)
-
     for clause in clauses:
-        print(clause)
         if tautology_check(clause[1]):
             clauses[clauses.index(clause)] = None
-    clauses = coverage_check(clauses)
 
-    print(clauses)
+    clauses = coverage_check(clauses)
 
     found = False
     index = finish_index
@@ -136,10 +131,11 @@ def resolution(clauses):
                                     expanded_clauses.append(first_clause)
                                 if second_clause not in expanded_clauses:
                                     expanded_clauses.append(second_clause)
-                                expanded_clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
                                 clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
                                 clauses = coverage_check(clauses)
-                                print(f"            NOVA KLAUZULA JE {clauses[-1]}")
+                                if clauses[-1] != None:
+                                    expanded_clauses.append(clause_builder(first_clause, second_clause, literal, len(clauses) + 1))
+                                print(f"            NOVA KLAUZULA JE {expanded_clauses[-1]}")
                                 used_clauses_pairs.append((first_clause[0], second_clause[0]))
 
                                 if expanded_clauses[-1][1] == []:

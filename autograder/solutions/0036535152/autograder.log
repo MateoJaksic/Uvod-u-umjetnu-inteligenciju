@@ -1,4 +1,4 @@
-0036535152
+lab1
 ================
 
 === UNARCHIVE AND STRUCTURE ===
@@ -9,21 +9,659 @@ Skipping (python)
 
 === EVALUATION ===
 
-== BFS ==
-  Passed 6 / 6 tests.
-
-== UCS ==
-  Passed 6 / 6 tests.
-
-== A-STAR ==
-  Passed 7 / 7 tests.
-
-== HEURISTIC-CONSISTENT ==
-  Passed 10 / 10 tests.
-
-== HEURISTIC-OPTIMISTIC ==
-  Passed 10 / 10 tests.
-
 === TOTAL RESULTS ===
-39 / 39 tests passed. (100.00%)
+0 / 15 tests passed. (0.00%)
 
+== ID3 ==
+  Passed 0 / 8 tests.
+    BRANCHES: 0 / 8
+    PREDICTIONS: 0 / 8
+    ACCURACY: 0 / 8
+    CONFUSION_MATRIX: 0 / 8
+
+- Failed test: python solution.py volleyball.csv volleyball_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.57895
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:weather=rainy 2:wind=strong no
+1:weather=sunny 2:humidity=high no
+1:weather=rainy 2:wind=weak yes
+1:weather=cloudy yes
+1:weather=sunny 2:humidity=normal yes
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+4 7
+1 7
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+yes yes yes yes no yes yes yes no yes yes no yes no no yes yes yes yes
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(weather)=0.2467  IG(humidity)=0.1518  IG(wind)=0.0481  IG(temperature)=0.0292  
+IG(wind)=0.9710  IG(humidity)=0.0200  IG(temperature)=0.0200  
+IG(humidity)=0.9710  IG(temperature)=0.5710  IG(wind)=0.0200  
+[BRANCHES]:
+1:weather=cloudy yes
+1:weather=rainy 2:wind=strong no
+1:weather=rainy 2:wind=weak yes
+1:weather=sunny 2:humidity=high no
+1:weather=sunny 2:humidity=normal yes
+[PREDICTIONS]: yes yes yes yes no yes yes yes no yes yes no yes no no yes yes yes yes
+[ACCURACY]: 0.57895
+[CONFUSION_MATRIX]:
+4 7
+1 7
+
+- Failed test: python solution.py logic_small.csv logic_small_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.50000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:A=True 2:C=True True
+1:A=False False
+1:A=True 2:C=False False
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+3 2
+1 0
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+False False True False False True
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(A)=0.3219  IG(C)=0.2365  IG(D)=0.2365  IG(B)=0.0000  
+IG(C)=1.0000  IG(D)=1.0000  IG(B)=0.0000  
+[BRANCHES]:
+1:A=False False
+1:A=True 2:C=False False
+1:A=True 2:C=True True
+[PREDICTIONS]: False False True False False True
+[ACCURACY]: 0.50000
+[CONFUSION_MATRIX]:
+3 2
+1 0
+
+- Failed test: python solution.py heldout_logic_f2_train.csv heldout_logic_f2_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.75000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:A=False 2:B=True 3:D=False False
+1:A=False 2:B=False 3:C=True False
+1:A=False 2:B=False 3:C=False 4:D=False True
+1:A=False 2:B=True 3:D=True True
+1:A=False 2:B=False 3:C=False 4:D=True False
+1:A=True True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 1
+1 5
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True True True True False True False True
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(A)=0.2044  IG(D)=0.1589  IG(B)=0.0488  IG(C)=0.0032  
+IG(B)=0.0817  IG(D)=0.0817  IG(C)=0.0000  
+IG(C)=0.2516  IG(D)=0.2516  
+IG(D)=1.0000  
+IG(D)=0.9183  IG(C)=0.2516  
+[BRANCHES]:
+1:A=False 2:B=False 3:C=False 4:D=False True
+1:A=False 2:B=False 3:C=False 4:D=True False
+1:A=False 2:B=False 3:C=True False
+1:A=False 2:B=True 3:D=False False
+1:A=False 2:B=True 3:D=True True
+1:A=True True
+[PREDICTIONS]: True True True True False True False True
+[ACCURACY]: 0.75000
+[CONFUSION_MATRIX]:
+1 1
+1 5
+
+- Failed test: python solution.py heldout_logic_f3_train.csv heldout_logic_f3_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+1.00000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:B=True 2:A=False False
+1:B=True 2:A=True True
+1:B=False True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 0
+0 2
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True True False
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(B)=0.3219  IG(A)=0.1710  IG(C)=0.1710  
+IG(A)=1.0000  IG(C)=0.0000  
+[BRANCHES]:
+1:B=False True
+1:B=True 2:A=False False
+1:B=True 2:A=True True
+[PREDICTIONS]: True True False
+[ACCURACY]: 1.00000
+[CONFUSION_MATRIX]:
+1 0
+0 2
+
+- Failed test: python solution.py heldout_logic_f4_train.csv heldout_logic_f4_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.78571
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:E=True 2:C=True 3:D=True 4:B=False False
+1:E=True 2:C=False False
+1:E=True 2:C=True 3:D=True 4:B=True True
+1:E=False True
+1:E=True 2:C=True 3:D=False True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+3 1
+2 8
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True True True True False False False True True True True True False False
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(E)=0.3569  IG(B)=0.1582  IG(C)=0.1474  IG(A)=0.0198  IG(D)=0.0112  
+IG(C)=0.5900  IG(B)=0.3198  IG(D)=0.0911  IG(A)=0.0183  
+IG(D)=0.3219  IG(B)=0.1710  IG(A)=0.0729  
+IG(B)=1.0000  IG(A)=0.0000  
+[BRANCHES]:
+1:E=False True
+1:E=True 2:C=False False
+1:E=True 2:C=True 3:D=False True
+1:E=True 2:C=True 3:D=True 4:B=False False
+1:E=True 2:C=True 3:D=True 4:B=True True
+[PREDICTIONS]: True True True True False False False True True True True True False False
+[ACCURACY]: 0.78571
+[CONFUSION_MATRIX]:
+3 1
+2 8
+
+- Failed test: python solution.py heldout_singlefeat_train.csv heldout_singlefeat_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+1.00000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:one=b no
+1:one=a yes
+1:one=c yes
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 0
+0 2
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+yes no yes
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(one)=0.9183  
+[BRANCHES]:
+1:one=a yes
+1:one=b no
+1:one=c yes
+[PREDICTIONS]: yes no yes
+[ACCURACY]: 1.00000
+[CONFUSION_MATRIX]:
+1 0
+0 2
+
+- Failed test: python solution.py heldout_small_train.csv heldout_small_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+1.00000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:one=a yes
+1:one=c maybe
+1:one=b no
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 0 0
+0 1 0
+0 0 1
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+yes no maybe
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(one)=1.5850  IG(three)=1.5850  IG(two)=1.5850  
+[BRANCHES]:
+1:one=a yes
+1:one=b no
+1:one=c maybe
+[PREDICTIONS]: yes no maybe
+[ACCURACY]: 1.00000
+[CONFUSION_MATRIX]:
+1 0 0
+0 1 0
+0 0 1
+
+- Failed test: python solution.py heldout_unseen_featurevalue_train.csv heldout_unseen_featurevalue_test.csv
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.33333
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:one=a yes
+1:one=c maybe
+1:one=b no
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 0 0
+1 0 0
+1 0 0
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+maybe maybe maybe
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(one)=1.5850  IG(three)=1.5850  IG(two)=1.5850  
+[BRANCHES]:
+1:one=a yes
+1:one=b no
+1:one=c maybe
+[PREDICTIONS]: maybe maybe maybe
+[ACCURACY]: 0.33333
+[CONFUSION_MATRIX]:
+1 0 0
+1 0 0
+1 0 0
+
+== ID3 LIMITED DEPTH ==
+  Passed 0 / 7 tests.
+    BRANCHES: 0 / 7
+    PREDICTIONS: 0 / 7
+    ACCURACY: 0 / 7
+    CONFUSION_MATRIX: 0 / 7
+
+- Failed test: python solution.py volleyball.csv volleyball_test.csv 1
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.36842
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:weather=rainy yes
+1:weather=cloudy yes
+1:weather=sunny no
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+2 9
+3 5
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+yes no no yes yes no yes yes yes yes yes yes yes no no yes yes yes yes
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(weather)=0.2467  IG(humidity)=0.1518  IG(wind)=0.0481  IG(temperature)=0.0292  
+[BRANCHES]:
+1:weather=cloudy yes
+1:weather=rainy yes
+1:weather=sunny no
+[PREDICTIONS]: yes no no yes yes no yes yes yes yes yes yes yes no no yes yes yes yes
+[ACCURACY]: 0.36842
+[CONFUSION_MATRIX]:
+2 9
+3 5
+
+- Failed test: python solution.py titanic_train_categorical.csv titanic_test_categorical.csv 2
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.77228
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:sex=male 2:cabin_letter=C no
+1:sex=male 2:cabin_letter=E no
+1:sex=male 2:cabin_letter=G no
+1:sex=female 2:passenger_class=lower_class yes
+1:sex=female 2:passenger_class=middle_class yes
+1:sex=male 2:cabin_letter=D no
+1:sex=male 2:cabin_letter=U no
+1:sex=female 2:passenger_class=upper_class yes
+1:sex=male 2:cabin_letter=T no
+1:sex=male 2:cabin_letter=A no
+1:sex=male 2:cabin_letter=F no
+1:sex=male 2:cabin_letter=B no
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+54 11
+12 24
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+no no yes no no no yes yes no yes no yes no no no no no yes no yes no no no yes no no yes no no no yes no no yes no no no no no yes yes no no no no yes no no no no no no yes no no no no no no yes no no yes yes yes yes yes no yes no no no yes yes no yes yes no no no no yes no no yes yes no no no yes yes no yes no no yes no yes yes no no
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(sex)=0.2180  IG(fare)=0.0888  IG(passenger_class)=0.0712  IG(cabin_letter)=0.0682  IG(age)=0.0204  
+IG(passenger_class)=0.1914  IG(cabin_letter)=0.1050  IG(fare)=0.0961  IG(age)=0.0533  
+IG(cabin_letter)=0.0492  IG(age)=0.0384  IG(fare)=0.0369  IG(passenger_class)=0.0330  
+[BRANCHES]:
+1:sex=female 2:passenger_class=lower_class yes
+1:sex=female 2:passenger_class=middle_class yes
+1:sex=female 2:passenger_class=upper_class yes
+1:sex=male 2:cabin_letter=A no
+1:sex=male 2:cabin_letter=B no
+1:sex=male 2:cabin_letter=C no
+1:sex=male 2:cabin_letter=D no
+1:sex=male 2:cabin_letter=E no
+1:sex=male 2:cabin_letter=F no
+1:sex=male 2:cabin_letter=G no
+1:sex=male 2:cabin_letter=T no
+1:sex=male 2:cabin_letter=U no
+[PREDICTIONS]: no no yes no no no yes yes no yes no yes no no no no no yes no yes no no no yes no no yes no no no yes no no yes no no no no no yes yes no no no no yes no no no no no no yes no no no no no no yes no no yes yes yes yes yes no yes no no no yes yes no yes yes no no no no yes no no yes yes no no no yes yes no yes no no yes no yes yes no no
+[ACCURACY]: 0.77228
+[CONFUSION_MATRIX]:
+54 11
+12 24
+
+- Failed test: python solution.py logic_small.csv logic_small_test.csv 1
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.83333
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:A=True False
+1:A=False False
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+5 0
+1 0
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+False False False False False False
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(A)=0.3219  IG(C)=0.2365  IG(D)=0.2365  IG(B)=0.0000  
+[BRANCHES]:
+1:A=False False
+1:A=True False
+[PREDICTIONS]: False False False False False False
+[ACCURACY]: 0.83333
+[CONFUSION_MATRIX]:
+5 0
+1 0
+
+- Failed test: python solution.py heldout_logic_f2_train.csv heldout_logic_f2_test.csv 3
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.75000
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:A=False 2:B=True 3:D=False False
+1:A=False 2:B=False 3:C=False False
+1:A=False 2:B=False 3:C=True False
+1:A=False 2:B=True 3:D=True True
+1:A=True True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 1
+1 5
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True True True True False True False True
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(A)=0.2044  IG(D)=0.1589  IG(B)=0.0488  IG(C)=0.0032  
+IG(B)=0.0817  IG(D)=0.0817  IG(C)=0.0000  
+IG(C)=0.2516  IG(D)=0.2516  
+IG(D)=0.9183  IG(C)=0.2516  
+[BRANCHES]:
+1:A=False 2:B=False 3:C=False False
+1:A=False 2:B=False 3:C=True False
+1:A=False 2:B=True 3:D=False False
+1:A=False 2:B=True 3:D=True True
+1:A=True True
+[PREDICTIONS]: True True True True False True False True
+[ACCURACY]: 0.75000
+[CONFUSION_MATRIX]:
+1 1
+1 5
+
+- Failed test: python solution.py heldout_logic_f3_train.csv heldout_logic_f3_test.csv 1
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.66667
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:B=True False
+1:B=False True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+1 0
+1 1
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+False True False
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(B)=0.3219  IG(A)=0.1710  IG(C)=0.1710  
+[BRANCHES]:
+1:B=False True
+1:B=True False
+[PREDICTIONS]: False True False
+[ACCURACY]: 0.66667
+[CONFUSION_MATRIX]:
+1 0
+1 1
+
+- Failed test: python solution.py heldout_logic_f4_train.csv heldout_logic_f4_test.csv 2
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.71429
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:E=True 2:C=False False
+1:E=True 2:C=True True
+1:E=False True
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+2 2
+2 8
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True True True True False False False True True True True True False True
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(E)=0.3569  IG(B)=0.1582  IG(C)=0.1474  IG(A)=0.0198  IG(D)=0.0112  
+IG(C)=0.5900  IG(B)=0.3198  IG(D)=0.0911  IG(A)=0.0183  
+[BRANCHES]:
+1:E=False True
+1:E=True 2:C=False False
+1:E=True 2:C=True True
+[PREDICTIONS]: True True True True False False False True True True True True False True
+[ACCURACY]: 0.71429
+[CONFUSION_MATRIX]:
+2 2
+2 8
+
+- Failed test: python solution.py train_4.csv test_4.csv 2
+- Mismatch with field: ACCURACY
+-> Obtained output:
+
+-> Expected output:
+0.47619
+- Mismatch with field: BRANCHES
+-> Branches created but not expected:
+
+-> Missing branches:
+1:A=True 2:C=True False
+1:A=Unknown 2:B=Unknown False
+1:A=False 2:C=Unknown Unknown
+1:A=False 2:C=False False
+1:A=Unknown 2:B=False Unknown
+1:A=False 2:C=True False
+1:A=True 2:C=Unknown True
+1:A=True 2:C=False True
+1:A=Unknown 2:B=True Unknown
+- Mismatch with field: CONFUSION_MATRIX
+-> Obtained output:
+
+-> Expected output:
+5 1 1
+2 2 1
+3 3 3
+- Mismatch with field: PREDICTIONS
+-> Obtained output:
+
+-> Expected output:
+True False True False True False True Unknown False False Unknown False False Unknown False True False Unknown Unknown True False
+--> Complete obtained output:
+
+--> Complete expected output:
+IG(A)=0.1651  IG(C)=0.0516  IG(D)=0.0459  IG(E)=0.0450  IG(B)=0.0160  
+IG(C)=0.3637  IG(B)=0.2693  IG(E)=0.2246  IG(D)=0.0524  
+IG(C)=0.1612  IG(D)=0.1367  IG(E)=0.0795  IG(B)=0.0559  
+IG(B)=0.5205  IG(C)=0.4696  IG(D)=0.2378  IG(E)=0.1299  
+[BRANCHES]:
+1:A=False 2:C=False False
+1:A=False 2:C=True False
+1:A=False 2:C=Unknown Unknown
+1:A=True 2:C=False True
+1:A=True 2:C=True False
+1:A=True 2:C=Unknown True
+1:A=Unknown 2:B=False Unknown
+1:A=Unknown 2:B=True Unknown
+1:A=Unknown 2:B=Unknown False
+[PREDICTIONS]: True False True False True False True Unknown False False Unknown False False Unknown False True False Unknown Unknown True False
+[ACCURACY]: 0.47619
+[CONFUSION_MATRIX]:
+5 1 1
+2 2 1
+3 3 3

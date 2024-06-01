@@ -340,9 +340,6 @@ if __name__ == "__main__":
 
 
 # UPUTE ZA POKRETANJE
-# 
-# SMJESTIMO SE U PRAVI DIREKTORIJ ZA SAMOSTALNO TESTIRANJE
-# cd autograder\data\lab1\templates\lab1py
 #
 # AKTIVIRAMO AUTOGRADER OKOLINU S PRAVOM VERZIJOM PYTHONA
 # conda activate autograder_env
@@ -352,11 +349,3 @@ if __name__ == "__main__":
 #
 # POKRENEMO OCJENJIVANJE
 # python autograder.py lab1
-
-# IZVORI
-# pseudokod iz prezentacija predmeta
-# https://www.geeksforgeeks.org/python-linked-list/ za Node()
-# https://www.geeksforgeeks.org/python-__lt__-magic-method/ za lt metodu kod Node()
-# https://www.geeksforgeeks.org/deque-in-python/ za deque()
-# https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/ za heapq()
-# https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value za sortiranje dictionarya

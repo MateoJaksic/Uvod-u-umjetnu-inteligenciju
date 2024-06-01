@@ -295,9 +295,6 @@ if __name__ == "__main__":
 
 
 # UPUTE ZA POKRETANJE
-# 
-# SMJESTIMO SE U PRAVI DIREKTORIJ ZA SAMOSTALNO TESTIRANJE
-# cd autograder\data\lab2\templates\lab2py
 #
 # AKTIVIRAMO AUTOGRADER OKOLINU S PRAVOM VERZIJOM PYTHONA
 # conda activate autograder_env
@@ -307,7 +304,3 @@ if __name__ == "__main__":
 #
 # POKRENEMO OCJENJIVANJE
 # python autograder.py lab2
-
-# IZVORI
-# prezentacije predmeta
-# https://youtu.be/RhWslFWaFzE?si=RZ-nCI_0HWj2q2w-

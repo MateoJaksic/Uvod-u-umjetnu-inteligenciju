@@ -142,7 +142,7 @@ def genetic_algorithm(train_x, train_y, test_x, test_y, architecture, population
         best_evaluations = getElitism(elitism, evaluations)  # određivanje koje jedinke spadaju u elitističke, ukoliko postoji elitizam
         
         # ispis kvadratnog odstupanja za svaku 2000. iteraciju
-        if (index+1) % 2000 == 0 or index == 0: 
+        if (index+1) % 2000 == 0: 
             print(f"[Train error @{index+1}]: {population[best_evaluations[0]].getError() if elitism > 0 else population[getElitism(1, evaluations)[0]].getError()}")
             
     # ispis kvadratnog odstupanja za testni skup
